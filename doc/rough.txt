@@ -1,0 +1,53 @@
+
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Debian/debian.sh && bash debian.sh
+
+
+
+sox pulseaudio
+
+
+xfce4 pulseaudio openssh-server proftpd tigervnc-standalone-server tigervnc-xorg-extension tigervnc-viewer
+
+
+dbus-x11
+pulseaudio
+
+
+// pulse in termux
+#### awnto edits
+
+#load-module module-sles-source
+#load-module module-null-sink sink_name=virtspk sink_properties=device.description=Virtual_Speaker
+
+#load-module module-native-protocol-tcp port=1500 auth-anonymous=1
+#auth-ip-acl=127.0.0.1;192.168.0.0/16
+#auth-anonymous=1
+load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1;192.168.0.0/16 auth-anonymous=1
+load-module module-cli-protocol-unix
+
+load-module module-sles-source
+load-module module-sles-sink
+
+#module-http-protocol-tcp
+
+#### end awnto edits
+
+
+
+//pulse in linux
+##### awnto edits
+
+#load-module module-sles-source
+#load-module module-null-sink sink_name=virtspk sink_properties=device.description=Virtual_Speaker
+
+#load-module module-sles-sink
+#load-module module-aaudio-sink
+
+#load-module module-pipe-sink
+#load-module module-pipe-source
+
+load-module module-tunnel-sink-new server=127.0.0.1 sink_name=Awnto_spk sink_properties=device.description=Awnto_Wireless_Speaker
+load-module module-tunnel-source-new server=127.0.0.1 source_name=Awnto_mic source_properties=device.description=Awnto_Wireless_Microphone
+##### end awnto edits
+
+
