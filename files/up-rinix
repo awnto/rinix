@@ -1,0 +1,55 @@
+
+cd 
+
+echo ""
+echo ""
+
+echo "removing old files .."
+rm -r .rinix
+rm rinix/start
+
+echo ""
+echo ""
+echo "copying new files .."
+mkdir .rinix
+#cp -R /sdcard/AWN/rinix .rinix
+cd .rinix
+
+echo ""
+echo ""
+echo "--------- Downloading Rinix OS -------"
+echo ""
+echo ""
+
+wget http://localhost:8888/AWN/rinix.tar.gz
+
+echo ""
+echo ""
+echo "------------ Installing ----------"
+echo ""
+echo ""
+
+tar -xzvf rinix.tar.gz
+rm rinix.tar.gz
+
+cd ..
+
+echo ""
+echo ""
+echo "setting permission .."
+chmod 755 -R .rinix
+mkdir rinix
+cp .rinix/rinix/start rinix/start
+
+echo ""
+echo ""
+echo "------------ END ----------"
+echo ""
+echo ""
+echo "installer version : 1.1"
+echo "Rinix Version : "`cat .rinix/rinix/dat/version`
+echo ""
+echo ""
+echo "type 'nano rinix/start'"
+echo "to configure Rinix"
+echo ""
