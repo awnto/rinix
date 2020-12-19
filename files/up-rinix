@@ -21,7 +21,7 @@ echo "--------- Downloading Rinix OS -------"
 echo ""
 echo ""
 
-wget http://localhost:8888/AWN/rinix.tar.gz
+wget http://rinix.awnto.com/files/rinix.tar.gz
 
 echo ""
 echo ""
