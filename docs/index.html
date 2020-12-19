@@ -1,0 +1,222 @@
+<html>
+
+<head>
+<style>
+
+
+<title>Rinix OS - Docs</title>
+
+.cde
+{
+	color:#888888;
+}
+
+
+</style>
+
+  
+
+<!-- Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-135386004-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135386004-1');
+</script>
+
+<!-- /Google Analytics -->
+
+
+
+</head>
+<body>
+<pre>
+
+	Rinix OS is a Desktop GNU/linux on android kernel(custom linux kernel)
+	based on debian using proot 
+	supports grapical , command line , audio , microphone
+
+	using termux , termux-api apps 
+
+	for audio,mic we use pulseaudio modules
+
+	for video output you can use vnc client 
+		we are currenty working on native video output without using tcp,sockets
+		and android cam as webcam
+		
+	
+	
+
+--------- Steps for installation -------------
+
+Step 1 :
+
+	open termux and type
+<div class="cde">
+apt update
+apt install pulseaudio sox nano tar termux-api wget
+</div>
+	configure pulse audio in termux
+<div class="cde">
+cd
+nano ../usr/etc/pulse/default.pa
+</div>
+		add these lines in nano at last in file ../usr/etc/pulse/default.pa
+		"Ctrl + x" to exit nano test editor 
+		192.168.0.0/16 is for LAN ip addresses
+<div class="cde">
+#### awnto edits
+load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1;192.168.0.0/16 auth-anonymous=1
+load-module module-cli-protocol-unix
+load-module module-sles-source
+load-module module-sles-sink
+#### end awnto edits
+</div>
+
+
+	configure pulse audio in termux
+<div class="cde">
+cd
+nano ../usr/etc/pulse/daemon.conf
+</div>
+		change "; exit-idle-time = 20" ---> " exit-idle-time = -1" don't remove first space
+
+
+Step 2 :
+
+	to install debian root filesystem
+<div class="cde">
+cd
+mkdir rinix-fs && cd rinix-fs
+mkdir debian && cd debian
+
+pkg install wget openssl-tool proot -y && hash -r
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Debian/debian.sh
+bash debian.sh
+</div>
+
+Step 3 :
+
+	login to debian proot
+<div class="cde">
+./start-debian.sh
+</div>
+	then install needed softwares for Rinix OS
+<div class="cde">
+apt install nano wget xfce4 pulseaudio openssh-server proftpd tigervnc-standalone-server tigervnc-xorg-extension tigervnc-viewer tigervncserver-common dbus-x11 pulseaudio
+</div>
+Step 4 :
+	configure softwares for Rinix OS
+	
+	setting correct permission
+<div class="cde">
+chmod 4755 /bin/su
+	</div>
+	ports 0 - 999 is reserved for root
+	
+<div class="cde">
+nano /etc/ssh/sshd_config</div>
+	change "#Port 22" ---> "Port 7022" remove '#' also 
+
+
+<div class="cde">
+nano /etc/proftpd/proftpd.conf</div>
+	change "Port 21" ---> "Port 7021" 
+
+
+<div class="cde">
+nano /etc/pulse/default.pa</div>
+		add these lines in nano at last in file /etc/pulse/default.pa
+<div class="cde">
+#### awnto edits
+load-module module-tunnel-sink-new server=127.0.0.1 sink_name=Awnto_spk sink_properties=device.description=Awnto_Wireless_Speaker
+load-module module-tunnel-source-new server=127.0.0.1 source_name=Awnto_mic source_properties=device.description=Awnto_Wireless_Microphone
+#### end awnto edits
+</div>
+	set pulse config for Rinix OS
+<div class="cde">
+nano /etc/pulse/daemon.conf</div>
+		change "; exit-idle-time = 20" ---> " exit-idle-time = -1" don't remove first space
+	
+
+	create a user >> use your desired username in place of "rishu" 
+<div class="cde">
+adduser rishu</div>
+
+	set vnc password for user
+<div class="cde">
+vncserver :78
+vncserver --kill :78</div>
+
+
+	configuration of softwares for Rinix OS is done -- exit to debian proot 	
+<div class="cde">
+exit</div>
+
+
+Stpe 5 : Install Rinix OS
+
+	give storage permission to termux app to share storage file
+<div class="cde">
+mkdir /sdcard/AWN</div>
+
+	give microphone permission to termux-api app if you want microphone support for Rinix OS
+
+
+	install Rinix OS
+<div class="cde">
+cd
+wget http://rinix.awnto.com/files/up-rinix
+chmod 755 up-rinix
+sh up-rinix</div>
+
+	config Rinix OS
+<div class="cde">
+nano rinix/start</div>
+	replace "RINIX_RDU=rishu" to your username "RINIX_RDU=username"
+	replace "RINIX_RFS=xxxxxx" to "RINIX_RFS=yyyyy" to your debian proot path
+	
+	in RINIX OS
+		rinix_rbin		/root/orc
+		rinix_user		/home/rishu/orc
+		shared_folder		/home/rishu/AWN
+		android_storage		/home/rishu/sdcard
+		other_shared		/home/rishu/shared/*
+	here rishu stands for your username eg /home/user/AWN
+	
+	defaults
+		DISPLAY=:78 over vnc port 5978
+		
+Step 6 :
+
+	Start RinixOS
+<div class="cde">
+cd
+sh rinix/start
+</div>
+
+Step 7 : to make Rinix OS auto start when termux app open
+	
+	this is a option step (recommanded to use Step 7)
+	login to termux shell (not Rinix , Debian shell)
+<div class="cde">
+cd 
+nano ../usr/etc/bash.bashrc
+</div>
+	add this line at last
+	"sh /data/data/com.termux/files/home/rinix/start"
+	
+
+Step 8 : enjoy
+
+</pre>
+
+<hr><iframe frameborder="0" style="background: #2b2b2b;" width=100% src="comments_fb?page=docs"></iframe>
+
+</body>
+</html>
+
+
