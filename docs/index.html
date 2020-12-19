@@ -218,6 +218,18 @@ nano .rinix/rinix/orc/lock</div>
 	where termux-tts-speak comes
 	in termux shell
 
+-----------------------------------
+
+Solution of libre office error on Rinix OS
+
+	You can edit file /usr/lib/libreoffice/program/oosplash with any 
+	HEX editor (bless for example). Just find text "/proc/version" 
+	(LibreOffice checks this file) and change to for example "/prod/version". 
+	Then you can create fake empty "/prod/version" file in the filesystem, 
+	then Office starts and works well 
+	
+	fake proc/version file <a href="/files/proc_version">Here</a>
+
 </pre>
 
 <hr><iframe frameborder="0" style="background: #2b2b2b;" width=100% src="comments_fb?page=docs"></iframe>
