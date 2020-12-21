@@ -49,7 +49,7 @@ echo ""
 echo "------------ END ----------"
 echo ""
 echo ""
-echo "installer version : 1.1"
+echo "installer version : 1.2"
 echo "Rinix Version : "`cat .rinix/rinix/dat/version`
 echo ""
 echo ""
