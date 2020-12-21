@@ -43,6 +43,9 @@ cp .rinix/rinix/start rinix/start
 
 echo ""
 echo ""
+sh .rinix/rinix/autorun
+echo ""
+echo ""
 echo "------------ END ----------"
 echo ""
 echo ""
