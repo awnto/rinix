@@ -5,7 +5,7 @@ echo ""
 echo ""
 
 echo "removing old files .."
-rm -r .rinix
+rm -r .rinix/rinix
 rm rinix/start
 
 echo ""
