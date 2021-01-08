@@ -164,6 +164,17 @@ wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/I
 bash debian.sh
 </div>
 
+to install kali nethunter root filesystem
+<div class="cde">
+cd
+mkdir rinix-fs && cd rinix-fs
+mkdir nethunter && cd nethunter
+
+pkg install wget openssl-tool proot -y && hash -r
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Nethunter/nethunter.sh
+bash nethunter.sh
+</div>
+
 Step 3 :
 
 	login to debian proot
