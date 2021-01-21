@@ -1,0 +1,72 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+
+pdir=$HOME/.awnto
+pfol=rnx-d
+pfll=$pdir/$pfol
+
+mkdir -p $pfll
+
+cd $pdir
+
+echo ""
+echo ""
+
+arch=`uname -m`
+
+echo "architecture : $arch "
+
+case $arch in
+aarch64)
+
+#rnx_tar=http://
+echo -n ""
+#exit 
+
+;;
+
+*)
+
+
+echo "no supported : $arch "
+
+echo ""
+echo "kindly contact "
+echo "https://rinix.awnto.com"
+echo ""
+echo ""
+echo "or run this after some days"
+echo ""
+exit ;;
+esac
+
+
+
+
+#tar -xvf /sdcard/AWN/proj/rnx/rnx-d.tar.xz
+
+echo "executing backup program"
+if test -f ./$pfol/backup ;
+then
+	echo "backing data"
+	./$pfol/backup
+else
+	echo "no data for backing"
+fi
+
+echo "--------------"
+rm -rvf $pfol
+echo "--------------"
+cp -rvf /sdcard/AWN/proj/rnx/$pfol .
+echo "--------------"
+chmod -R 755 $pfol
+echo "--------------"
+
+
+exec ./$pfol/trigger
+
+
+
+
+
+
