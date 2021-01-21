@@ -70,9 +70,9 @@
 		we are currenty working on native video output without using tcp,sockets
 		and android cam as webcam
 		
-<img src="shots/1.png" height=500 > <img src="shots/1.1.png" height=500 >
+<img src="shots/rnx_1.png" height=500 > <img src="shots/1.1.png" height=500 >
 
-<img src="shots/2.png" height=300 >
+<img src="shots/rnx_2.png" height=300 >
 
 Rinix OS video <a href="https://youtu.be/pl8Ccu5ooNM" >Youtube</a>
 
@@ -121,251 +121,22 @@ Step 1 :
 	download "termux" and "termux api"
 	from play store
 	open termux and type
+
 <div class="cde">
 apt update
 apt install pulseaudio sox nano tar termux-api wget
 </div>
-	configure pulse audio in termux
+
+
 <div class="cde">
-cd
-nano ../usr/etc/pulse/default.pa
-</div>
-		add these lines in nano at last in file ../usr/etc/pulse/default.pa
-		"Ctrl + x" to exit nano test editor 
-		192.168.0.0/16 is for LAN ip addresses
-<div class="cde">
-#### awnto edits
-load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1;192.168.0.0/16 auth-anonymous=1
-load-module module-cli-protocol-unix
-load-module module-sles-source
-load-module module-sles-sink
-#### end awnto edits
-</div>
-
-
-	configure pulse audio in termux
-<div class="cde">
-cd
-nano ../usr/etc/pulse/daemon.conf
-</div>
-		change "; exit-idle-time = 20" ---> " exit-idle-time = -1" don't remove first space
-
-
-Step 2 : (choose any of one)(anlinux) or (use your installed root filesystem)
-
-	to install debian root filesystem
-<div class="cde">
-cd
-mkdir rinix-fs && cd rinix-fs
-mkdir debian && cd debian
-
 pkg install wget openssl-tool proot -y && hash -r
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Debian/debian.sh
-bash debian.sh
 </div>
-
-
-	to install kali nethunter root filesystem
-<div class="cde">
-cd
-mkdir rinix-fs && cd rinix-fs
-mkdir nethunter && cd nethunter
-
-pkg install wget openssl-tool proot -y && hash -r 
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Nethunter/nethunter.sh 
-bash nethunter.sh 
-</div>
-
-
-	to install kali root filesystem
-<div class="cde">
-cd
-mkdir rinix-fs && cd rinix-fs
-mkdir kali && cd kali
-
-pkg install wget openssl-tool proot -y && hash -r 
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Kali/kali.sh 
-bash kali.sh 
-</div>
-
-
-
-	to install ubuntu root filesystem
-<div class="cde">
-cd
-mkdir rinix-fs && cd rinix-fs
-mkdir ubuntu && cd ubuntu
-
-pkg install wget openssl-tool proot -y && hash -r 
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh 
-bash ubuntu.sh 
-</div>
-
-
-
-
-
-Step 3 :
-
-	login to debian proot (or nethunter/kali/ubuntu)
-<div class="cde">
-./start-debian.sh
-</div>
-	then install needed softwares for Rinix OS
-<div class="cde">
-apt update
-apt install nano wget xfce4 pulseaudio openssh-server proftpd tigervnc-standalone-server tigervnc-xorg-extension tigervnc-viewer tigervnc-common dbus-x11 pulseaudio
-</div>
-Step 4 :
-	configure softwares for Rinix OS
-	
-	setting correct permission
-<div class="cde">
-chmod 4755 /bin/su
-	</div>
-
-	setting root password
-<div class="cde">
-passwd
-	</div>
-
-
-	ports 0 - 999 is reserved for root
-	
-<div class="cde">
-nano /etc/ssh/sshd_config</div>
-	change "#Port 22" ---> "Port 7022" remove '#' also 
-
-
-<div class="cde">
-nano /etc/proftpd/proftpd.conf</div>
-	change "Port 21" ---> "Port 7021" 
-	if getting error in proftpd
-	add '#' at starting where IdentLookups
-	as "#IdentLookups"
-
-
-<div class="cde">
-nano /etc/pulse/default.pa</div>
-		add these lines in nano at last in file /etc/pulse/default.pa
-<div class="cde">
-#### awnto edits
-load-module module-tunnel-sink-new server=127.0.0.1 sink_name=Awnto_spk sink_properties=device.description=Awnto_Wireless_Speaker
-load-module module-tunnel-source-new server=127.0.0.1 source_name=Awnto_mic source_properties=device.description=Awnto_Wireless_Microphone
-#### end awnto edits
-</div>
-	set pulse config for Rinix OS
-<div class="cde">
-nano /etc/pulse/daemon.conf</div>
-		change "; exit-idle-time = 20" ---> " exit-idle-time = -1" don't remove first space
-	
-
-	create a user >> use your desired username in place of "rishu" 
-<div class="cde">
-adduser rishu</div>
-
-	set vnc password for user
-<div class="cde">
-su rishu
-vncserver :78
-vncserver --kill :78</div>
-	if ~/.vnc/xstartup not exit then l 
-	"nano ~/.vnc/xstartup" 
-	add "xfce4-session" as new line
-	and chmod 755 to xstartup
-	connect to vnc
-	your local ip is 127.0.0.1
-	192.168.x.x lan ip
-	command "ip addr" to know your ip
-
-	configuration of softwares for Rinix OS is done -- exit to debian proot 	
-<div class="cde">exit</div>
-	exit from user
-<div class="cde">exit</div>
-	exit from debian proot shell
-
-
-Stpe 5 : Install Rinix OS
-
-	give storage permission to termux app in android settings to share storage files
-
-	in Termux shell
-
-	<div class="cde">
-mkdir /sdcard/AWN</div>
-
-	give microphone permission to termux-api app if you want microphone support for Rinix OS
-
-
-	install Rinix OS
-<div class="cde">
-cd
-wget http://rinix.awnto.com/files/up-rinix
-chmod 755 up-rinix
-sh up-rinix</div>
-
-	config Rinix OS
-<div class="cde">
-nano rinix/start</div>
-	replace "RINIX_RDU=rishu" to your username "RINIX_RDU=username"
-	replace "RINIX_RFS=xxxxxx" to "RINIX_RFS=yyyyy" to your debian proot path if different
-		you can also use root filesystem of kali , nethunter , ubuntu 
-		just use their folder location RINIX_RFS=yyyyy 
-		example : Rinix_RFS=/data/data/com.termux/nethunter
-
-	command "pwd" to know your current folder
-	
-	in RINIX OS
-		rinix_rbin		/root/orc
-		rinix_user		/home/rishu/orc
-		shared_folder		/home/rishu/AWN
-		android_storage		/home/rishu/sdcard
-		other_shared		/home/rishu/shared/*
-	here rishu stands for your username eg /home/user/AWN
-	
-	defaults
-		DISPLAY=:78 over vnc port 5978
-		
-Step 6 :
-
-	Start Rinix OS
-<div class="cde">
-cd
-sh rinix/start
-</div>
-
-Step 7 : to make Rinix OS auto start when termux app open
-	
-	this is a optional step (recommanded to use Step 7)
-	login to termux shell (not Rinix nor Debian shell)
-<div class="cde">
-cd 
-nano ../usr/etc/profile
-</div>
-	add this line at last
-	"sh /data/data/com.termux/files/home/rinix/start"
 	
 
 Step 8 : enjoy
 
-Step 9 (optional) :
-	to stop audio welcome in Rinix OS
-<div class="cde">
-cd
-nano .rinix/rinix/orc/lock</div>
-	add '#' at starting of line
-	where termux-tts-speak comes
-	in termux shell
 
-Step 10 :
-	to start custom services on startup
-	such as apache2,etc
-	add scripts in
-	root           /root/orc/sev/sq
-	user           /home/rishu/orc/sev/sq
-	user_with_x11  /home/rishu/orc/sevx/sq
-	rishu stand for your username
-	
+
 
 -----------------------------------
 
