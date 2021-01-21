@@ -18,9 +18,9 @@ echo "architecture : $arch "
 
 case $arch in
 aarch64)
-
-#rnx_tar=http://
-echo -n ""
+rnx_tn=rnx-d-aarch64.tar.gz
+rnx_tar_link=http://rinix.awnto.com/rnx-get/files/$rnx_tn
+#echo -n ""
 #exit 
 
 ;;
@@ -41,6 +41,11 @@ exit ;;
 esac
 
 
+if ! wget -O $rnx_tn $rnx_tar_link ;
+then
+	exit
+fi
+
 
 
 #tar -xvf /sdcard/AWN/proj/rnx/rnx-d.tar.xz
@@ -57,7 +62,10 @@ fi
 echo "--------------"
 rm -rvf $pfol
 echo "--------------"
-cp -rvf /sdcard/AWN/proj/rnx/$pfol .
+#cp -rvf /sdcard/AWN/proj/rnx/$pfol .
+
+tar -xzvf $rnx_tn
+
 echo "--------------"
 chmod -R 755 $pfol
 echo "--------------"
