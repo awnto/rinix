@@ -126,12 +126,15 @@ Step 1 :
 apt update
 apt install pulseaudio sox nano tar termux-api wget
 </div>
-
-
 <div class="cde">
 pkg install wget openssl-tool proot -y && hash -r
 </div>
-	
+<div class="cde">
+wget -O up-rnx https://rinix.awnto.com/rnx-get/files/up-rnx
+chmod 755 up-rnx
+./up-rnx
+rm up-rnx
+</div>
 
 Step 8 : enjoy
 
