@@ -5,7 +5,7 @@ this is official Rinix OS github page
 
 
 Rinix OS is a Desktop GNU/Linux on android kernel(custom linux kernel)
-based on debian/ubuntu/kali/nethunter/etc using proot
+based on debian using proot
 supports graphical , command line , audio , microphone
 
 Dual boot Android and Linux (no root)
