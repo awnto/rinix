@@ -25,6 +25,14 @@ rnx_tar_link=http://rinix.awnto.com/rnx-get/files/$rnx_tn
 
 ;;
 
+armv7l)
+rnx_tn=rnx-d-cross.tar.gz
+rnx_tar_link=http://rinix.awnto.com/rnx-get/files/$rnx_tn
+#echo -n ""
+#exit 
+
+;;
+
 *)
 
 
