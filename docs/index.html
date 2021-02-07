@@ -158,6 +158,7 @@ Instagram(Rishu) : <a href="https://instagram.com/i.rishabhsarswa">Here</a>
 --------- Table of contents -------------
 
 <a href="#ins4aarch64" >Installation for arm64 == aarch64</a>
+<a href="#ins4armv7l" >Installation for armv7l == armhf</a>
 
 
 Safe and open source
@@ -230,7 +231,7 @@ rnx su
 	then install pulseaudio , tigervnc , sshd , proftpd , --- so on
 <div class="cde" >
 apt update
-apt install -y nano wget xfce4 pulseaudio openssh-server proftpd tigervnc-standalone-server tigervnc-xorg-extension tigervnc-viewer tigervnc-common dbus-x11
+apt install -y nano wget xfce4 pulseaudio openssh-server proftpd tigervnc-standalone-server tigervnc-xorg-extension tigervnc-viewer tigervnc-common dbus-x11 xfce4-terminal
 </div>
 	then
 <div class="cde" >
@@ -287,7 +288,7 @@ rnx next
 
 
 <div class="cdeg" > Step 4 :</div>
-
+vnc app <a href="https://abog.awnto.com/vc/direct/?ref=rinix_bvnc_app&u=https://play.google.com/store/apps/details?id=com.iiordanov.freebVNC" >bvnc</a>
 connect to vnc over port 5978 (GUI)
 
 ip ==>
@@ -442,6 +443,111 @@ Telegram : <a href="https://telegram.me/awnto_public" >Group</a>
 Telegram : <a href="https://telegram.me/iawnto" >Help Desk</a>
 
 ----------------------------------
+
+
+<div id="ins4armv7l" ></div>
+
+--------- Steps for installation : armv7l == armhf -------------
+
+<span class="cder" >Note : 	this method is only for
+	'armv7l' == 'armhf' devices </span>
+
+	type 'uname -m' to check your device architecture
+	if architecture not 'armv7l' you can use old Rinix version <a href="ndocs_v1.html" >Here</a>
+
+
+<div class="cdeg" > Step 1 :</div>
+
+	download "termux" and "termux api"
+	from play store
+	open termux and run commands in gey color text given below
+
+	Give Storage Permission to termux
+	Give microphone permission to termux-api (optional)
+	lock termux in android recent apps (so termux app keep alive until you close it)
+
+
+
+<div class="cde">
+apt update
+apt install -y pulseaudio sox nano tar termux-api wget
+</div>
+	then
+<div class="cde">
+pkg install wget openssl-tool proot -y && hash -r
+</div>
+	then
+<div class="cde">
+wget -O up-rnx https://rinix.awnto.com/rnx-get/files/up-rnx-cross
+chmod 755 up-rnx
+./up-rnx
+rm up-rnx
+</div>
+
+
+<div class="cdeg" > Step 2 :</div>
+
+Step 2 : Download rootfs.tar.xz
+		select debian buster armhf <a href="http://deocker.debian.net" >Here</a> (30MB)
+
+Download rootfs file
+and create folder AWN in phone storage
+place rootfs file in AWN folder
+<div class="cder">||Phone_Storage &gt;&gt; AWN &gt;&gt; rootfs.tar.xz </div>
+
+	then 
+<div class="cde">
+cd
+mkdir -p rnx-fs/im-fs
+cd rnx-fs/im-fs
+tar -xvJf /sdcard/AWN/rootfs.tar.xz
+</div>
+	then
+<div class="cde">
+rnx su
+</div>
+	then install pulseaudio , tigervnc , sshd , proftpd , --- so on
+<div class="cde" >
+apt update
+apt install -y nano wget xfce4 pulseaudio openssh-server proftpd tigervnc-standalone-server tigervnc-xorg-extension tigervnc-viewer tigervnc-common dbus-x11 xfce4-terminal
+</div>
+	then
+<div class="cde" >
+exit
+</div>
+
+force configure
+<div class="cde">
+rnx fcnf
+</div>
+
+to set rnx profile
+<div class="cde">
+rnx next
+</div>
+
+to check Linux installed correctly
+<div class="cde">
+rnx next
+</div>
+
+<div class="cdeg" > Step 3 :</div>
+set vncserver confs
+<div class="cde">
+tigervncserver :1
+tigervncserver --kill :1
+</div>
+
+	then restart your phone
+
+
+<div class="cdeg" > Step 4 :</div>
+
+	continue steps from step 4 aarch64 same for armhf
+	same as step 4 in installeation of aarch64
+
+--------------------------------
+
 
 </pre>
 
