@@ -440,6 +440,18 @@ rnx &lt; option &gt;
 
 Solution for libreoffice error in Rinix OS
 
+	first install libreoffice
+	libreoffice fix 
+<div class="cde">
+mkdir -p /proc
+wget -O /proc/version https://rinix.awnto.com/rnx-get/files/pla/proc_version
+
+mv /usr/lib/libreoffice/program/oosplash /usr/lib/libreoffice/program/oosplash.ori
+wget -0 /usr/lib/libreoffice/program/oosplash https://rinix.awnto.com/rnx-get/files/pla/libre_oosplash
+</div>
+	all done now open libereoffice
+
+<!--
 	You can edit file /usr/lib/libreoffice/program/oosplash with any 
 	HEX editor (bless for example). Just find text "/proc/version" 
 	(LibreOffice checks this file) and change to for example "/prod/version". 
@@ -448,6 +460,7 @@ Solution for libreoffice error in Rinix OS
 	
 	fake proc/version file <a href="/files/proc_version">Here</a>
 	
+-->
 Solution for chromium
 
 	use "chromium --no-sandbox" instead of "chromium"
