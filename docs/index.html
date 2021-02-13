@@ -196,7 +196,7 @@ Source Code : <a href="http://rinix.awnto.com/rnx-get/files/rnx-d-cross.tar.gz" 
 	lock termux in android recent apps (so termux app keep alive until you close it)
 
 
-
+<!--
 <div class="cde">
 apt update
 </div>
@@ -216,6 +216,7 @@ chmod 755 up-rnx
 rm up-rnx
 </div>
 
+-->
 
 <div class="cdeg" > Step 2 :</div>
 
@@ -265,6 +266,17 @@ rnx next
 
 <div class="cdeg" > Step 3 :</div>
 
+	install rinix binaries and configure RNX Linux 
+<div class="cde">
+pkg install -y wget
+wget -O up-rnx https://rinix.awnto.com/rnx-get/files/up-rnx
+chmod 755 up-rnx
+./up-rnx
+rm up-rnx
+rnx guide
+echo "all done"
+</div>
+<!--
 to update rnx
 <div class="cde">
 rnx update
@@ -301,7 +313,7 @@ to check Linux installed correctly
 rnx next
 </div>
 
-
+-->
 
 <div class="cdeg" > Step 4 :</div>
 vnc app <a href="https://abog.awnto.com/vc/direct/?ref=rinix_bvnc_app&u=https://play.google.com/store/apps/details?id=com.iiordanov.freebVNC" >bvnc</a>
