@@ -1,6 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
 
+
+
 pdir=$HOME/.awnto
 pfol=rnx-d
 pfll=$pdir/$pfol
