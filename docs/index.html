@@ -672,9 +672,10 @@ place rootfs file in AWN folder
 	then 
 <div class="cde">
 cd
-mkdir -p rnx-fs/im-fs
-cd rnx-fs/im-fs
+mkdir -p $HOME/rnx-fs/im-fs
+cd $HOME/rnx-fs/im-fs
 proot --link2symlink tar -xvJf /sdcard/AWN/rootfs.tar.xz
+cd
 </div>
 	then
 <div class="cde">
