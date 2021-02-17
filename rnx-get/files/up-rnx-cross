@@ -49,6 +49,22 @@ rnx_tar_link=http://rinix.awnto.com/rnx-get/files/$rnx_tn
 *)
 
 
+archi=`dpkg --print-architecture`
+
+	echo "no direct using package architecture : $archi "
+
+
+
+	case $archi in
+	arm)
+	
+	rnx_dae=http://rinix.awnto.com/rnx-get/files/dae/dae-armhf
+
+	
+	;;
+	
+*)
+
 echo "no supported : $arch "
 
 echo ""
@@ -59,6 +75,10 @@ echo ""
 echo "or run this after some days"
 echo ""
 exit ;;
+
+esac
+
+
 esac
 
 
