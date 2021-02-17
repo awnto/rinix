@@ -19,3 +19,5 @@ rm work_inet
 wget -O work_inet "https://awntodataserv.000webhostapp.com/eco.php?rdu=`cat $pdir/$pfol/im/vari/rdu`&rfl=`cat $pdir/$pfol/im/vari/rnx_rfl`&ver`rnx version`"
 
 
+
+
