@@ -626,8 +626,8 @@ Right click on on taskbar >> "Panel" >> "Panel Preferences" >> select panel 2 >>
 <span class="cder" >Note : 	this method is only for
 	'armv7l' == 'armhf' devices </span>
 
-	type 'uname -m' to check your device architecture
-	if architecture not 'armv7l' you can use old Rinix version <a href="ndocs_v1.html" >Here</a>
+	type 'dpkg --print-architecture' to check your device package architecture
+	if architecture not 'arm' you can use old Rinix version <a href="ndocs_v1.html" >Here</a>
 
 
 <div class="cdeg" > Step 1 :</div>
@@ -691,6 +691,13 @@ rnx su
 	then install pulseaudio , tigervnc , sshd , proftpd , --- so on
 <div class="cde" >
 apt update
+</div>
+then
+<div class="cde">
+apt full-upgrade
+</div>
+then
+<div class="cde">
 apt install -y nano wget xfce4 pulseaudio openssh-server proftpd tigervnc-standalone-server tigervnc-xorg-extension tigervnc-viewer tigervnc-common dbus-x11 xfce4-terminal
 </div>
 	then
