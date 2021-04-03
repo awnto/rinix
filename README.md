@@ -17,7 +17,7 @@ using termux , termux-api apps
 for audio,mic we use pulseaudio modules
 
 for video output you can use vnc client
-we are currenty working on native video output without using tcp,sockets
+we are currenty working on native video output 
 and android cam as webcam
 
 Features :-
