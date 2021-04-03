@@ -10,6 +10,7 @@ supports graphical , command line , audio , microphone
 
 Dual boot Android and Linux (no root)
 Run both Android and Linux Simultaneously
+No harm to Android system
 
 using termux , termux-api apps
 
