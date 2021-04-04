@@ -35,4 +35,4 @@ Android as Desktop
 
 Author :- Rishabh Sarswa (Rishu)
 
-Installatin Guide / More detail : https://rinix.awnto.com/docs
+Installatin Guide / More detail : http://rinix.awnto.com/docs
