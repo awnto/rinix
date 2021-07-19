@@ -1,0 +1,228 @@
+
+
+
+<html>
+
+
+<head>
+
+
+
+<link rel="icon" type="image/png" href="/rnx_logo.png"/>
+	
+	<meta property="og:title" content="RNX OS Docs - RNX : Linux in 2 min" />
+	
+	<!-- <meta property="og:url" content="https://abog.awnto.com/" /> -->
+	
+	<meta property="og:description" content="RNX IO - Installation Guide">
+	
+	<meta property="og:image" content="/rnx_logo.png" />
+	
+	<meta property="og:type" content="article" />
+	
+	
+
+<meta name="description" content="
+Rinix OS Docs
+
+RNX Linux 
+
+Linux in 2 min 
+( 250MB with GUI ) 
+for android 
+with audio support 
+
+Just 4 easy steps😊😊 ">
+
+
+
+
+
+	<title>RNX OS Docs - RNX : Linux in 2 min</title>
+<style>
+.cde
+{
+	color:#888888;
+}
+.cder
+{
+	color:red;
+}
+.cdeg
+{
+	color:green;
+}
+
+</style>
+
+  
+
+<!-- Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-135386004-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135386004-1');
+</script>
+
+<!-- /Google Analytics -->
+
+
+
+</head>
+<body>
+<pre>
+<img src="/rnx_logo.png" alt="awnto_rnx" title="Awnto RNX" width=100 >
+########################
+----------- <div class="cder">RNX OS - Installation Guide</div>---------
+
+
+
+<div class="cdeg">NOTE : <!-- this is a testing version not a release version -->
+this is only for 64bit android devices ( aarch64 == arm64 )
+
+Android 10+ is not supported by Play Store Version
+for android 10+ you shoud "unistall play store's RNX K9 app" then "install apk from this webpage"
+
+<!--
+i will upload this on play store when testing , developing completed
+you may need to unistall this app when i upload on playstore to get updates -->
+</div>
+
+
+	
+<div class="cder" > Author :- Rishabh Sarswa (Rishu) </div>
+
+<img src="/rishabhsarswa.png" alt="rishabh_sarswa" title="Rishabh Sarswa" width=150 >
+Instagram(Rishu) : <a href="https://instagram.com/i.rishabhsarswa">Here</a>
+
+<!--
+Video Guide <a href="https://youtu.be/m_V22qClqJk" >Youtube</a> Testing Version
+-->
+
+Step 1 : Download and install app
+
+Currently not supported on all devices and have bugs on some devices
+
+
+Play Store Link <a href="https://play.google.com/store/apps/details?id=com.awnto.rinix.io" >Play Store</a>
+      OR
+RNX K9 <a href="http://rnx.awnto.com/rnx-get/files/rnx_io/rnx_k9_awnto_1.6.apk" >Download(1.5MB)</a>
+Latest App version 1.6
+
+<!--
+RNX IO <a href="http://rnx.awnto.com/rnx-get/files/rnx_io/rnx_io_alpha.apk" >Download(1.5MB)</a>
+-->
+
+Step 2 [ Only for offline install ][ optional step no need of it for online install ] : 
+
+Download these files and put in AWN folder
+
+and create folder AWN in phone storage
+place files in AWN folder
+<div class="cder">||Phone_Storage &gt;&gt; AWN &gt;&gt; downloaded_files </div>
+<!--
+i_usr <a href="http://rnx.awnto.com/rnx-get/files/i_usr/rnx_k9_usr_prock.tar.xz" >Download(5MB)</a>
+fatmx <a href="https://rnx.awnto.com/rnx-get/files/fatmx/rnx_k9_fatmx_prock.tar.xz" >Download(16MB)</a>
+RNX_OS <a href="https://www.mediafire.com/file/hv45yg9y0tiscpq/rnx_k9_linux.tar.xz/file" >Download(215MB)</a>
+-->
+RNX_OS <a href="https://gitlab.com/rishabhsarswa/rnx-lab-1/-/raw/main/rnx-get/files/k9rom/rnx_k9_linux_prock_aarch64.tar.xz" >Download(260MB)</a>
+
+Then Give storage permission to RNX IO App
+
+then open app and wait for installation
+
+<div class="cdeg">BUG : if you see dummy output in audio then restart RNX IO App
+or allow background for RNX IO App from android settings
+</div>
+
+
+Step 3 : Install Done | How to use |
+
+root password is == 1234
+
+
+run program for user setup
+
+     Desktop >> Awnto >> Setup User
+
+--------------
+
+support and options : 
+
+audio , video , opengl ,
+physical keyboard , physical mouse ,
+Awnto custom virtual keyboard
+
+--------------
+
+
+toggle keyboard == press volume up key
+
+scroll == swipe touch screen
+
+left click = single touch
+drag mouse left click == touch and hold then swipe touch screen
+
+right click == press volume down key then single touch
+drag mouse right click == press volume down key then touch and hold then swipe touch screen
+
+
+turn up android volume == single touch anywhere on screen then press volume up key
+turn down android volume == single touch anywhere on screen then press volume down key
+
+drag window == press volume down key then swipe touch screen
+
+-----------------
+
+
+run command 
+"rnx_uwax enable vncd"
+to start vnc so you can use RNX display on other devices
+
+------------------
+
+Step 4 : Refer Page
+
+to install vlc , firefox , etc applications
+refer to Step 5 of this page here <a href="http://rinix.awnto.com/docs/" >Click</a>
+in aarch(arm64) installation guide
+
+----------------------------------
+
+To join testing program
+it is only for testers
+
+send me your gmail id on telegram
+then i'll add you in testing group of Play Store for RNX K9
+Telegram : <a href="https://telegram.me/iawnto" >Help Desk</a>
+
+
+Activating/deactivating Link <a href="https://play.google.com/apps/internaltest/4700042667886078564" >Play Store</a>
+
+Play Store Link <a href="https://play.google.com/store/apps/details?id=com.awnto.rinix.io" >Play Store</a>
+
+
+----------------------------------
+Youtube : <a href="https://youtube.com/channel/UCbZsnEGVyYo2y95_qlQvVBA">Here</a>
+Twitter : <a href="https://twitter.com/iawnto">Here</a>
+Instagram(Rishu) : <a href="https://instagram.com/i.rishabhsarswa">Here</a>
+Facebook : <a href="https://facebook.com/awnto.go">Here</a>
+WhatsApp(Rishu) : <a href="whatsapp://send?phone=919001531376&text=Hi" >Here</a>
+Mail : i.awnto@gmail.com
+
+Telegram : <a href="https://telegram.me/awnto" >Channnel</a>
+Telegram : <a href="https://telegram.me/awnto_public" >Group</a>
+Telegram : <a href="https://telegram.me/iawnto" >Help Desk</a>
+
+----------------------------------
+
+
+
+</pre>
+</body>
+</html>
+
