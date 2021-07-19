@@ -12,23 +12,20 @@ Dual boot Android and Linux (no root)
 Run both Android and Linux Simultaneously
 No harm to Android system
 
-using termux , termux-api apps
 
 for audio,mic we use pulseaudio modules
 
-for video output you can use vnc client
-we are currenty working on native video output 
-and android cam as webcam
+we are currenty working on android cam as webcam
 
 Features :-
 audio,microphone support on proot linux distro
-automatic boot with termux app(optional)
+native display , 
 full x11 support with openGL
 
 Tags :-
-audio for proot Linux distro in termux
+audio for Linux distro in android
 run GNU/Linux on android
-automatic run linux with termux
+automatic run linux with android
 Desktop on Android
 Android as Desktop
 
