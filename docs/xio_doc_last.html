@@ -16,7 +16,7 @@
 	
 	<!-- <meta property="og:url" content="https://abog.awnto.com/" /> -->
 	
-	<meta property="og:description" content="RNX OS - Installation Guide">
+	<meta property="og:description" content="RNX K9 - Installation Guide">
 	
 	<meta property="og:image" content="/rnx_logo.png" />
 	
@@ -88,12 +88,12 @@ This is a Guide to install RNX Linux on your Android Device
 
 <a href="#ins4aarch64" >Installation for arm64 == aarch64</a>
 
-<span class="cdeg" >Latest Docs Version : 2.7 : currently only for aarch64(arm64) devices </span>
+<span class="cdeg" >Latest App Version : 1.6 : currently only for aarch64(arm64) devices </span>
 
-<!--Video Guide : <a href="https://youtu.be/X8_jvK0tIr8" >Youtube Watch</a>
--->
+Video Guide : <a href="https://youtu.be/X8_jvK0tIr8" >Youtube Watch</a>
 
-<a href="#guide4how_to_xio" >Guide for How to use RNX XIO</a>
+
+<a href="#guide4how_to_k9" >Guide for How to use RNX K9</a>
 
 <a href="#guide4rnx_update" >Guide for RNX Update Binaries</a>
 
@@ -107,8 +107,8 @@ This is a Guide to install RNX Linux on your Android Device
 
 <a href="https://github.com/awnto/rinix/issues" >Report an Issue / Bug / any other error</a>
 
-Last Docs Update : 16/08/2021 
-Docs : version = 2.7
+Last Docs Update : 19/07/2021 
+Docs : version = 2.6
 
 -----------------------------------------
 
@@ -123,8 +123,8 @@ Docs : version = 2.7
 <div class="cdeg">NOTE : <!-- this is a testing version not a release version -->
 this is only for 64bit android devices ( aarch64 == arm64 )
 
-RNX on Android 10+ is not supported by Play Store Version
-for android 10+ you shoud "unistall play store's RNX NEO app" then "install apk from this webpage"
+Android 10+ is not supported by Play Store Version
+for android 10+ you shoud "unistall play store's RNX K9 app" then "install apk from this webpage"
 
 <!--
 i will upload this on play store when testing , developing completed
@@ -141,94 +141,41 @@ Instagram(Rishu) : <a href="https://instagram.com/i.rishabhsarswa">Here</a>
 <!--
 Video Guide <a href="https://youtu.be/m_V22qClqJk" >Youtube</a> Testing Version
 -->
-<div class="cdeg">
-Step 1 : Download and install apps
-</div>
+
+Step 1 : Download and install app
+
 Currently not supported on all devices and have bugs on some devices
 
-<!--
+
 Play Store Link <a href="https://play.google.com/store/apps/details?id=com.awnto.rinix.io" >Play Store</a>
-      OR-->
-RNX Core <a href="http://rnx-dl-4.awnto.com/neo/apps/rnx_core.apk" >Download(17KB)</a>
-Latest App version 1.0
-
-RNX Neo Term <a href="http://rnx-dl-4.awnto.com/neo/apps/app-neo-sdk28.apk" >Download(5.6MB)</a>
-Latest App version 1.7 sdk28
-( RNX Neo is modified app of NeoTerm )
-RNX Neo Term : Mordern Terminal
-
-RNX XIO <a href="http://rnx-dl-4.awnto.com/neo/apps/rnx_xio.apk" >Download(1.1MB)</a>
-Latest App version 1.7
+      OR
+RNX K9 <a href="http://rnx.awnto.com/rnx-get/files/rnx_io/rnx_k9_awnto_1.6.apk" >Download(1.5MB)</a>
+Latest App version 1.6
 
 <!--
 RNX IO <a href="http://rnx.awnto.com/rnx-get/files/rnx_io/rnx_io_alpha.apk" >Download(1.5MB)</a>
 -->
-<div class="cdeg">
+
 Step 2 [ Only for offline install ][ optional step no need of it for online install ] : 
-</div>
+
 Download these files and put in AWN folder
 
 and create folder AWN in phone storage
 place files in AWN folder
-<div class="cder">||Phone_Storage &gt;&gt; AWN &gt;&gt; rnx_debian_linux_stable_gui_j_aarch64.tar.xz </div>
+<div class="cder">||Phone_Storage &gt;&gt; AWN &gt;&gt; rnx_k9_linux_prock_aarch64.tar.xz </div>
 <!--
 i_usr <a href="http://rnx.awnto.com/rnx-get/files/i_usr/rnx_k9_usr_prock.tar.xz" >Download(5MB)</a>
 fatmx <a href="https://rnx.awnto.com/rnx-get/files/fatmx/rnx_k9_fatmx_prock.tar.xz" >Download(16MB)</a>
 RNX_OS <a href="https://www.mediafire.com/file/hv45yg9y0tiscpq/rnx_k9_linux.tar.xz/file" >Download(215MB)</a>
 -->
-RNX_OS <a href="https://gitlab.com/rishabhsarswa/rnx-dl-9/-/raw/main/neo/iusr/rnx_debian_linux_stable_gui_j_aarch64.tar.xz" >Download(262MB)</a>
+RNX_OS <a href="https://gitlab.com/rishabhsarswa/rnx-lab-1/-/raw/main/rnx-get/files/k9rom/rnx_k9_linux_prock_aarch64.tar.xz" >Download(260MB)</a>
 
-Then Give storage permission to RNX App
+Then Give storage permission to RNX K9 App
 
-<div class="cdeg">
-Step 3 : Installing Linux
-</div>
-
-	install Latest binaries on RNX Core via RNX Neo
-	run below command
-<div class="cde">
-pingo get
-</div>
+then open app and wait for installation
 
 
-	install linux
-	run below command
-<div class="cde">
-rnx get-default-linux
-</div>
-
-
-
-	then set your linux in promt
-	1) root password
-	2) user setup
-
-
-to Start basic services 
-	run them as root user
-
-run command 
-"rnx_uwax enable xio"
-to enable RNX XIO app on startup
-
-run command 
-"rnx_uwax enable proftpd"
-to enable proftp server on startup
-
-run command 
-"rnx_uwax enable sshd"
-to enable sshd server on startup
-
-run command 
-"rnx_uwax enable vncd"
-to start vnc so you can use RNX display on other devices
- on startup
-
-
-
-<!--
-
-| How to use |
+Step 3 : Install Done | How to use |
 
 root password is == 1234
 
@@ -236,7 +183,7 @@ root password is == 1234
 run program for user setup
 
      Desktop >> Awnto >> Setup User
--->
+
 --------------
 
 support and options : 
@@ -247,8 +194,8 @@ Awnto custom virtual keyboard
 
 --------------
 
-<div id="guide4how_to_xio" ></div>
------------ <div class="cder">Guide for How to use RNX XIO</div>---------
+<div id="guide4how_to_k9" ></div>
+----------- <div class="cder">Guide for How to use RNX K9</div>---------
 
 	<a href="#k9index" >Index - Table</a>
 	
@@ -268,7 +215,6 @@ turn down android volume == single touch anywhere on screen then press volume do
 
 drag window == press volume down key then touch and hold then swipe touch screen
 
-<!--
 -----------------
 
 
@@ -276,7 +222,7 @@ run command
 "rnx_uwax enable vncd"
 then restart app
 to start vnc so you can use RNX display on other devices
--->
+
 ------------------
 
 <!--
@@ -311,8 +257,23 @@ Open Terminal then run
 <div class="cde">
 xnr update
 </div>
-	then restart RNX Neo App 
+	then restart RNX K9 App 
 	update is all done
+
+if getting error in "xnr update"
+then
+run as root user "apt install telnet"
+then
+<div class="cde">
+telnet 127.0.0.1 5023
+</div>
+	then run
+<div class="cde">
+rnx update
+</div>
+	then restart RNX K9 App 
+	update is all done
+
 
 
 -------------------------------------------------------------
