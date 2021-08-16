@@ -208,18 +208,26 @@ to Start basic services
 
 run command 
 "rnx_uwax enable xio"
+on default display :1
+xio is GUI Display for RNX
 to enable RNX XIO app on startup
 
 run command 
 "rnx_uwax enable proftpd"
+default port 7021
+proftpd is ftp server use to transfer file from other devices
 to enable proftp server on startup
 
 run command 
 "rnx_uwax enable sshd"
+default port 7022
+sshd is secure shell server use to open terminal other device
 to enable sshd server on startup
 
 run command 
 "rnx_uwax enable vncd"
+default port 5972 on default display :72
+vncd is remote desktop use to connect display from other device
 to start vnc so you can use RNX display on other devices
  on startup
 
