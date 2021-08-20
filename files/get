@@ -1,5 +1,14 @@
 
 #this is for rinix update check
 
+
+
+
+
+wget -O work_inet "https://awntodataserv.000webhostapp.com/eco.php?rdu=$RINIX_RDU&rfl=$RINIX_RFS&ver=1.0"
+
+
+
+
 rm work
 touch work
