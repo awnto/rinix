@@ -1,0 +1,182 @@
+
+
+
+<html>
+
+
+<head>
+
+
+
+<link rel="icon" type="image/png" href="/rnx_logo.png"/>
+	
+	<meta property="og:title" content="RNX OS Docs - How to add kali repository in debian / ubuntu or in any debian based distribution" />
+	
+	<!-- <meta property="og:url" content="https://abog.awnto.com/" /> -->
+	
+	<meta property="og:description" content="RNX OS - How to add kali repository in debian / ubuntu or in any debian based distribution">
+	
+	<meta property="og:image" content="/rnx_logo.png" />
+	
+	<meta property="og:type" content="article" />
+	
+	
+
+<meta name="description" content="
+Rinix OS Docs
+
+RNX Linux 
+
+Linux in 2 min 
+
+--- 
+
+How to add kali repository in debian / ubuntu or in any debian based distribution 
+
+ ">
+
+
+
+
+
+	<title>RNX OS Docs - How to add kali repository in debian / ubuntu or in any debian based distribution : Linux in 2 min</title>
+<style>
+.cde
+{
+	color:#888888;
+}
+.cder
+{
+	color:red;
+}
+.cdeg
+{
+	color:green;
+}
+
+</style>
+
+  
+
+<!-- Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-135386004-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135386004-1');
+</script>
+
+<!-- /Google Analytics -->
+
+
+
+</head>
+<body>
+<pre>
+<img src="/rnx_logo.png" alt="awnto_rnx" title="Awnto RNX" width=100 >
+########################
+
+----------- <div class="cder">RNX OS - Docs - How to add kali repository in debian / ubuntu or in any debian based distribution</div>---------
+
+<div class="cder" > Author :- Rishabh Sarswa (Rishu) </div>
+<!--
+<img src="/rishabhsarswa.png" alt="rishabh_sarswa" title="Rishabh Sarswa" width=150 >
+Instagram(Rishu) : <a href="https://instagram.com/i.rishabhsarswa">Here</a>
+
+-->
+How to add kali repository in debian / ubuntu or in any debian based distribution 
+
+<div id="soft_list" ></div>
+----------- <div class="cder">RNX OS - How to add kali repository in debian / ubuntu or in any debian based distribution</div>---------
+
+	<a href="/docs#k9index" >Index - Table</a>
+
+
+Step 1 : 
+
+run command
+<span class="cde" >
+su -c apt edit-sources
+</span>
+   
+   then enter your root password
+   it open command line text editor
+   then add below text at last of file
+
+<div class="cde">
+#### awnto edits
+deb http://http.kali.org/kali/ kali-rolling main non-free contrib
+#### end awnto edits
+</div>
+
+<img src="assets/001/add_kali_repo_1.jpg" width=300 >
+
+then save file
+     ctrl+s to save file
+   then
+     ctrl+x to close editor
+
+
+
+Step 2 : 
+
+add pgp key for signature verification
+
+   login to root user
+<span class="cde" >
+su
+</span>
+   then
+<span class="cde" >
+wget -q -O - https://archive.kali.org/archive-key.asc | apt-key add
+</span>
+
+
+
+Step 3 : 
+
+all done run as root user to update apt database
+<span class="cde" >
+apt update
+</span>
+
+
+
+Step 4 :
+
+Enjoy 
+All done 
+kali repository added to your linux
+
+
+credits : 
+1) Rishabh Sarswa : <a href="https://telegram.me/rishabhsarswa" >Contact Telegram</a>
+2) Just9n55 (J9) : <a href="https://telegram.me/just9n55" >Contact Telegram</a>
+
+
+<div class="cdeg">
+message me if you want to suggest something for RNX / facing any issues links are given below
+</div>
+
+----------------------------------
+Youtube : <a href="https://youtube.com/channel/UCbZsnEGVyYo2y95_qlQvVBA">Here</a>
+Twitter : <a href="https://twitter.com/iawnto">Here</a>
+Instagram(Rishu) : <a href="https://instagram.com/i.rishabhsarswa">Here</a>
+Facebook : <a href="https://facebook.com/awnto.go">Here</a>
+WhatsApp(Rishu) : <a href="whatsapp://send?phone=919001531376&text=Hi" >Here</a>
+Mail : i.awnto@gmail.com
+
+Telegram : <a href="https://telegram.me/awnto" >Channnel</a>
+Telegram : <a href="https://telegram.me/awnto_public" >Group</a>
+Telegram : <a href="https://telegram.me/iawnto" >Help Desk</a>
+
+----------------------------------
+
+
+
+</pre>
+</body>
+</html>
