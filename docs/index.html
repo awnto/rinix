@@ -97,6 +97,8 @@ Video Guide : <a href="https://youtu.be/ucSFl0Cz550" >Youtube Watch</a> by Awnto
 
 <a href="k9/soln4some_soft_errors" >Solution for some errors in Applications</a>
 
+<a href="#guide4phantom_killer" >How to disable phanton process killer in android</a>
+
 <a href="k9/upcoming" >Read : Features and Upcoming features in RNX</a>
 
 <a href="k9/soft_list" >List of Some Useful Softwares for RNX</a>
@@ -349,7 +351,28 @@ default port : 7080
 default web root directory : /awnto/sdcard/AWN/web
 apache2 is web server use to host websites 
 enable server on startup
+	
+--------------------------
+<div id="guide4phantom_kill" ></div>
+----------- <div class="cder">How to disable phantom process killer</div>---------
 
+	<a href="#k9index" >Index - Table</a>
+
+<img src="shots/phantom_pro_killer.jpg" height=700 > 
+
+in android 12 or higher android kills app processes having more than 32 process
+	to fix this issue connect your android to any other computer
+	then setup adb then command "adb devices" to check android connected or not
+	then run below commands 
+<span class="cde">
+adb shell "/system/bin/device_config set_sync_disabled_for_tests persistent"
+adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"
+adb shell settings put global settings_enable_monitor_phantom_procs false
+</span> 
+	now all done :)
+
+--------------------------
+	
 <div class="cdeg">
   Feel free to Message me if you facing any problem 
   Contact links are given at bottom of this page
