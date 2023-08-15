@@ -11,4 +11,6 @@ but 3rd party softwares work on their own
 user can install softwares from command line
 
 users can download or create scripts , programs
-and execute  can them 
+and they can execute them 
+
+we don't have servers for collectiong any information
