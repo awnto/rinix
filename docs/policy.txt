@@ -1,7 +1,7 @@
+Privacy Policy
 
 
 RNX is free system
-based on debian linux
 
 user can install 3rd party softwares
 we by default don't collect any user information
@@ -10,4 +10,5 @@ but 3rd party softwares work on their own
 
 user can install softwares from command line
 
-
+users can download or create scripts , programs
+and execute  can them 
