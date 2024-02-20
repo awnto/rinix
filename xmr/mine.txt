@@ -1,3 +1,5 @@
+to Mine for RNX (optional)
+
 
 ./xmrig -o rx.unmineable.com:3333 -a rx -k -u XMR:8AvUQ4BZsmicdxZGfzDDBvVobcGqDQzmpE9osVJ5osk4jgKSoFsdXqmPwwh8dVAnPeY7AcW6MysSz2RSA5eb539B1CgNsGp.host1
 
