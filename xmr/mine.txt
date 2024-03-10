@@ -5,3 +5,8 @@ to Mine for RNX (optional)
 
 https://unmineable.com/coins/XMR/address/8AvUQ4BZsmicdxZGfzDDBvVobcGqDQzmpE9osVJ5osk4jgKSoFsdXqmPwwh8dVAnPeY7AcW6MysSz2RSA5eb539B1CgNsGp
 
+
+
+nicehash
+
+./xmrig -o randomxmonero.auto.nicehash.com:9200 -a rx -k -u NHbDxWHWypfNfGW37rdsUWZuMGZiybgfWR4c
