@@ -10,3 +10,12 @@ https://unmineable.com/coins/XMR/address/8AvUQ4BZsmicdxZGfzDDBvVobcGqDQzmpE9osVJ
 nicehash
 
 ./xmrig -o randomxmonero.auto.nicehash.com:9200 -a rx -k -u NHbDxWHWypfNfGW37rdsUWZuMGZiybgfWR4c
+
+
+
+
+coinbase eth
+0xC5f8953C41E3ec3e2Ab7638082B7Ae7a20300C98
+
+
+
