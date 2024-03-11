@@ -17,5 +17,8 @@ nicehash
 coinbase eth
 0xC5f8953C41E3ec3e2Ab7638082B7Ae7a20300C98
 
+coinbase glm
+0x7dd9c5cba05e151c895fde1cf355c9a1d5da6429
+
 
 
