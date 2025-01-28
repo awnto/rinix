@@ -89,9 +89,10 @@ You can run desktop linux softwares on android on this
 
 <a href="#ins4aarch64" >Installation for arm64 == aarch64</a>
 
-Video Guide : <a href="https://youtu.be/ucSFl0Cz550" >Youtube Watch</a> by Awnto
+<h2>Video Guide : <a href="https://youtu.be/ucSFl0Cz550" >Youtube Watch</a> by Awnto</h2>
 
 <a href="#guide4how_to_xio" >Guide for How to use RNX XIO</a>
+	<a href="https://youtu.be/YvjqNHzaGGo">Youtube Guide</a> for RNX XIO controls
 
 <a href="#guide4rnx_update" >Guide for RNX Update Binaries</a>
 
@@ -105,21 +106,29 @@ Video Guide : <a href="https://youtu.be/ucSFl0Cz550" >Youtube Watch</a> by Awnto
 
 <a href="k9/soft_list" >List of Some Useful Softwares for RNX</a>
 
+<a href="#guide4games" >GPU and Gaming on RNX</a>
+
 <a href="https://github.com/awnto/rinix/issues" >Report an Issue / Bug / any other error</a>
 
 <a href="k9/about" >Know More About RNX </a>
 
-<a href="k9/kano" >Community Support Guides and Fixes </a>
+<a href="k9/miracast" >How to Cast RNX Linux on TV using MiraCast / WiFi Display </a>
 
-	
+<a href="k9/kano" >Community Support Guides and Fixes </a>
+<!--
+<a href="kano/install_kde_plasma" >How to Install KDE Plasma Desktop on Android - RNX Linux</a>
+	<a href="https://youtu.be/httbXPy7eTs">Youtube Guide</a> for KDE Plasma
+-->	
 <a href="/download" ><h2>Download RNX Apps</h2></a>
 
 <a href="/donate" ><h2>Donate to RNX </h2><h1>🥳🥳</h1></a>
 
+To shut down RNX Linux open app android settings of RNX Terminal 
+then force stop RNX Terminal app
 
-Last Docs Update : 08/14/2023 
-Docs : version = 2.8.1
-Latest RNX = V2.8.1
+Last Docs Update : 2024/09/11 
+Docs : version = 2.8.8
+Latest RNX = V2.8.8
 
 no need of rooted android for running RNX
 you can use all features of RNX without rooting your android
@@ -128,29 +137,50 @@ you can use all features of RNX without rooting your android
 
    === Timeline ===
 	
-28/08/2023 : RNX V2.8.4    : Released on Docs
+2025/01/17 : RNX XIO V3.4
+             Fixed mouse glitch on using physical mouse
+             Fixed Awnto keyboard for users using 
+               android system navigation gestures
+	
+2024/09/28 : RNX System 3.1.2 
+             added support for arm 32bit devices
+	
+2024/09/11 : RNX XIO V2.8    : Released on Docs
+             MiraCast / WiFi Display added
+             for RNX XIO app V2.8
+	
+2024/05/07 : RNX V2.8.6    : Released on Docs
+             rnx core added android gpu
+	     rnx xio added game mode and some fixes
+             
+2024/04/09 : RNX V2.8.5    : Released on Docs
+             rnx core app updated
+	     rnx xio app updated
+             display scaling option added
+	
+2023/08/28 : RNX V2.8.4    : Released on Docs
              X sever running on native android only for RNX XIO
              dynamic resolution added
              keyboard layout improved
 
-13/08/2023 : RNX V2.8.1    : Released on Docs
+2023/08/13 : RNX V2.8.1    : Released on Docs
              support added for playstore
              RNX Core UI added
              1 click to shutdown option added in UI
 
-06/08/2023 : RNX V2.7.9    : Released on Docs
+2023/08/06 : RNX V2.7.9    : Released on Docs
              support added for commands 
              "poweroff" , "reboot"
              and many core fixes
 
-01/01/2023 : RNX V2.7.4    : Released on Docs
+2023/01/01 : RNX V2.7.4    : Released on Docs
              updated apps xio and rnx core
 
-08/09/2021 : RNX V2.7.2    : Released on Docs
+2021/09/08 : RNX V2.7.2    : Released on Docs
              added apache2 rnx_uwax service , some minor fixes
 
-29/08/2021 : RNX TMX Term  : App Released on Docs 
-28/08/2021 : RNX V2.7.1    : Released on Docs
+2021/08/29 : RNX TMX Term  : App Released on Docs 
+2021/08/28 : RNX V2.7.1    : Released on Docs
 
 project RNX started in 2018
 	
@@ -176,7 +206,8 @@ project RNX started in 2018
 
 <div class="cder">NOTE : <!-- this is a testing version not a release version -->
 this is only for 64bit android devices ( aarch64 == arm64 )
-
+	also added support for arm 32bit devices on 2024/09/28
+	
 RNX on Android 10+ is now supported by Play Store Version
 you need to download and install RNX Core and RNX Neo Apps
 then restart phone 
@@ -301,7 +332,7 @@ rnx get-default-linux
 	1) select debian
 	2) set root password
 	3) user setup
-	This will install and setup Debian Bullseye on Android
+	This will install and setup Debian on Android
 
 
 to Start basic services 
@@ -342,7 +373,7 @@ to windows remote desktop
 search in start menu "remote desktop"
 then enter your ip address
 connect your android and windows on same WiFi network
-to know your phone ip run command "ip addr" in RNX Terminal
+to know your phone ip run command "busybox ifconfig" in RNX Terminal
 your phone wifi ip will look like "192.168.x.x" eg : 192.168.43.1
 then use address "192.168.x.x" in Remote Desktop
 then after log in use Xvnc and enter username and password
@@ -357,7 +388,7 @@ RealVNC Client <a href="https://play.google.com/store/apps/details?id=com.realvn
 then use address "127.0.0.1::5972" in RealVNC app
 to connect VNC to windows install VNC Viewer on Windows
 connect your android and windows on same WiFi network
-to know your phone ip run command "ip addr" in RNX Terminal
+to know your phone ip run command "busybox ifconfig" in RNX Terminal
 your phone wifi ip will look like "192.168.x.x" eg : 192.168.43.1
 then use address "192.168.x.x::5972" in VNC Viewer
 OR for fast frame rate bVNC app <a href="https://play.google.com/store/apps/details?id=com.iiordanov.freebVNC" >bvnc</a>
@@ -383,7 +414,7 @@ enable server on startup
 in android 12 or higher android kills app processes having more than 32 process
 	to fix this issue connect your android to any other computer
 	then setup adb then command "adb devices" to check android connected or not
-	then run below commands 
+	then run below commands in connected computer
 <span class="cde">
 adb shell "/system/bin/device_config set_sync_disabled_for_tests persistent"
 adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"
@@ -391,6 +422,34 @@ adb shell settings put global settings_enable_monitor_phantom_procs false
 </span> 
 	now all done :)
 
+--------------------------
+
+<div id="guide4games" ></div>
+----------- <div class="cder">GPU and Gaming on RNX</div>---------
+
+	<a href="#k9index" >Index - Table</a>
+	
+added default GPU on RNX V2.8.6 or higer 
+you can use gaming mode in RNX XIO app 
+
+List of Games provided by debian
+<a href="https://blends.debian.org/games/tasks/" >Debian Games</a>
+
+Note : not all games or programs works properly with android GPU
+	eg : firefox doesn't work properly with android gpu
+
+
+<img src="assets/shots/ss_rnx_game_mode_1.jpg" width=600 >
+	Trigger Rally "apt install trigger-rally"
+
+
+to run program without android gpu (on software renderer) 
+<span class="cde">
+rnx-no-glx [program command]
+</span> 
+	eg : "rnx-no-glx firefox"
+
+	
 --------------------------
 	
 <div class="cdeg">
@@ -431,6 +490,8 @@ run command to enable
 you only need to enable xio once
 
       ------ controls -------
+	
+<a href="https://youtu.be/YvjqNHzaGGo">Youtube Guide</a> for RNX XIO controls
 	
 toggle keyboard == swipe right from left edge or swipe up from bottom
 
@@ -503,6 +564,8 @@ Mail : i.awnto@gmail.com
 Telegram : <a href="https://telegram.me/awnto" >Channnel</a>
 Telegram : <a href="https://telegram.me/awnto_public" >Group</a>
 Telegram : <a href="https://telegram.me/iawnto" >Help Desk</a>
+
+WhatsApp : <a href="https://whatsapp.com/channel/0029VaBBKCA6WaKqF5cIxb1Q" >Channel</a>
 
 ----------------------------------
 
