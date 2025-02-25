@@ -414,7 +414,8 @@ enable server on startup
 in android 12 or higher android kills app processes having more than 32 process
 	to fix this issue connect your android to any other computer
 	then setup adb then command "adb devices" to check android connected or not
-	then run below commands in connected computer
+	then run below commands in connected computer 
+	it will not void your device warranty
 <span class="cde">
 adb shell "/system/bin/device_config set_sync_disabled_for_tests persistent"
 adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"
