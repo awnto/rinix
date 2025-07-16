@@ -1,0 +1,2 @@
+for indian fonts
+apt install fonts-indic
