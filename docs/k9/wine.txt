@@ -1,4 +1,10 @@
 
+sudo dpkg --add-architecture i386
+sudo dpkg --add-architecture amd64
+sudo apt update
+sudo apt update
+
+
 
 # Add Box64 repo
 sudo wget https://ryanfortner.github.io/box64-debs/box64.list -O /etc/apt/sources.list.d/box64.list
