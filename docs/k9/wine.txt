@@ -9,3 +9,21 @@ wget -qO- https://ryanfortner.github.io/box64-debs/KEY.gpg | sudo gpg --dearmor 
 # Update and install
 sudo apt update
 sudo apt install box64
+
+
+
+
+# Update system
+sudo apt update && sudo apt upgrade
+
+# Install dependencies
+sudo apt install box64 wine
+
+# Export Box64 path (if needed)
+export BOX64_PATH=/usr/bin/box64
+
+# Use box64 to run Wine with a Windows executable
+box64 wine your_windows_app.exe
+
+
+
