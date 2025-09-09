@@ -1,0 +1,67 @@
+
+
+<text>
+
+This is a Guide to install RNX Linux on your Android Device
+
+RNX apps are use to run desktop applications on android
+You can run desktop linux softwares on android on this
+
+</text>
+
+**Step 1 :**
+<text>Download and install apps
+
+</text>
+    `Download page`
+<text>
+
+Install Apps in order 
+    RNX Core >> RNX Neo >> RNX XIO
+    
+</text>
+
+**Step 2 :**
+<text>Installing Linux
+
+	run below command in RNX Terminal
+
+</text>
+```bash
+rnx get-default-linux
+```
+<text>
+	then set your linux in prompt
+	1) select debian
+	2) set root password
+	3) user setup
+	
+	This will install and setup debian on android
+
+</text>
+**Step 3:**
+
+<text>to Start basic services 
+
+	run below commands as root user
+        run command "su" to switch to root user
+        then enter your password
+
+</text>
+```bash
+rnx_uwax enable xio
+```
+<text>
+xio is GUI Display for RNX
+
+
+to disable startup service 
+run command 
+
+</text>
+```bash
+rnx_uwax disable xio
+```
+
+
+
