@@ -570,6 +570,7 @@ class awnto_ms_pop{
 						  	this.coderEleData = document.createElement('div');
 						  	this.coderEleData.classList.add('a_coder_view_area');
 						  	this.coderEle.appendChild(this.coderEleData);
+						  	const coderEleData = this.coderEleData;
 						  	
 						  	const headEle_copy = document.createElement('span');
 					  		headEle_copy.classList.add('a_coder_view_head_copy');
@@ -578,7 +579,7 @@ class awnto_ms_pop{
 						  	headEle_copy.addEventListener('click', () => {
 							  //this.coderEleData.innerText = 'You clicked me!';
 							  //const text = textDiv.innerText;
-							  navigator.clipboard.writeText(this.coderEleData.innerText)
+							  navigator.clipboard.writeText(coderEleData.innerText)
 							    .then(() => {
 							      //console.log('Text copied to clipboard!');
 							      headEle_copy.innerHTML="Copied";
