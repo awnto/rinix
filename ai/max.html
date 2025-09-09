@@ -478,15 +478,25 @@ class awnto_ms_pop{
     	}
     	perform_message_lock_unlock(code,bool)
 	{
-			  if(code==1 && bool == 1 )
+			  if(code==1 )
 			  {
-			  	this.coderEle = document.createElement('pre');
-			  	this.coderEle.classList.add('a_coder_view');
-			  	this.msgBox.appendChild(this.coderEle);
-			  	this.coder_view_code="";
-			  	this.coder_view_code_type="";
-			  	this.coder_view_active_header=0 ;
-			  	
+			  	if( bool == 1)
+			  	{
+				  	this.coderEle = document.createElement('pre');
+				  	this.coderEle.classList.add('a_coder_view');
+				  	this.msgBox.appendChild(this.coderEle);
+				  	this.coder_view_code="";
+				  	this.coder_view_code_type="";
+				  	this.coder_view_active_header=0 ;
+			  	}
+			  	/*
+			  	else
+			  	{
+			  		//console.log(this.coderEle.innerText);
+			  		const codeInner = this.coderEle.querySelector('.a_coder_view_area');
+					console.log(codeInner.innerText);
+			  	}
+			  	*/
 			  }
 			  else if(code==2 && bool == 1 )
 			  {
@@ -542,8 +552,11 @@ class awnto_ms_pop{
 						  	
 						  	const headEle_data = document.createElement('span');
 					  		headEle_data.classList.add('a_coder_view_head_data');
-						  	headEle_data.innerText=this.coder_view_code_type.toUpperCase();;
+						  	headEle_data.innerText=this.coder_view_code_type.toUpperCase();
 						  	headEle.appendChild(headEle_data);
+						  	
+						  	
+						  	
 						  	//headEle_data.style.left=headEle_cc.offsetWidth;
 						  	
 						  	/*
@@ -557,6 +570,24 @@ class awnto_ms_pop{
 						  	this.coderEleData = document.createElement('div');
 						  	this.coderEleData.classList.add('a_coder_view_area');
 						  	this.coderEle.appendChild(this.coderEleData);
+						  	
+						  	const headEle_copy = document.createElement('span');
+					  		headEle_copy.classList.add('a_coder_view_head_copy');
+						  	headEle_copy.innerText="Copy";
+						  	headEle.appendChild(headEle_copy);
+						  	headEle_copy.addEventListener('click', () => {
+							  //this.coderEleData.innerText = 'You clicked me!';
+							  //const text = textDiv.innerText;
+							  navigator.clipboard.writeText(this.coderEleData.innerText)
+							    .then(() => {
+							      //console.log('Text copied to clipboard!');
+							      headEle_copy.innerHTML="Copied";
+							    })
+							    .catch(err => {
+							      console.error('Failed to copy text: ', err);
+							      headEle_copy.innerText="Copy Err";
+							    });
+							});
 						  	
 					  	
 				  		}
@@ -629,7 +660,7 @@ function performSearch(x) {
     let lineNumber = 0;
     //a_glert("Searching ...");
 
-    fetch('https://remote2.awnto.com/ai/web/cur/gen2.php', {
+    fetch('gen2.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -662,9 +693,9 @@ function performSearch(x) {
                     
                     scroller();
                     
-                    const breakElement = document.createElement('div');
-		    breakElement.classList.add('a_chat_break_end');
-		    main_responseContainer.appendChild(breakElement);
+                    //const breakElement = document.createElement('div');
+		    //breakElement.classList.add('a_chat_break_end');
+		    //main_responseContainer.appendChild(breakElement);
                     scroller_do();
                     
                     /*
@@ -1030,6 +1061,33 @@ body
 	top: -5px;
 	left: -5px;
 }
+.a_coder_view_head_copy
+{
+	background-color: rgba(0, 0, 0, 0.1);
+	font-size: 20px;
+	padding: 5px;
+	margin: 5px;
+	padding: 5px;
+	display: inline-block;
+	position: relative;
+	top: -5px;
+	left: -5px;
+	  user-select: none;        /* Standard */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
+}
+.a_coder_view_head_copy:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #333333;
+  cursor: pointer;
+}
+.a_coder_view_head_copy:active {
+  background-color: rgba(128, 255, 128, 0.5);
+  color: #333333;
+  cursor: pointer;
+}
+
 .a_coder_view
 {
 	background-color: rgba(0, 0, 0, 0.1);
