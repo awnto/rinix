@@ -27,7 +27,28 @@
   <!-- Open Graph Type -->
   <meta property="og:type" content="website" />
   
+    
+
+<!-- Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-135386004-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135386004-1');
+</script>
+
+<!-- /Google Analytics -->
+
+  
+  
   <style>
+  
+  
+  
+  
 <?php
 	require("docs.css");
 ?>
