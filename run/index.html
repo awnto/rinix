@@ -455,27 +455,30 @@ textarea {
 	background: transparent;
 }
 /* Custom Scrollbar Styles */
-/*
+
         ::-webkit-scrollbar {
-            width: 16px; /* Width of the scrollbar * /
+            width: 16px; /* Width of the scrollbar */
               position: relative;
         }
         ::-webkit-scrollbar-track {
-            background: transparent; /* Background of the scrollbar track * /
+            background: transparent; /* Background of the scrollbar track */
         }
         ::-webkit-scrollbar-thumb {
-            background: lightblue; /* Color of the scrollbar thumb * /
-            border-radius: 8px; /* Rounding of the scrollbar thumb corners * /
+            background: lightblue; /* Color of the scrollbar thumb */
+            border-radius: 8px; /* Rounding of the scrollbar thumb corners * 
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: blue; /* Color of the scrollbar thumb on hover * /
+            background: blue; /* Color of the scrollbar thumb on hover */
         }
-        * /
+        
         
 
-        /* Firefox Custom Scrollbar Styles * /
-        scrollbar-width: thin; /* Width of the scrollbar * /
+        /* Firefox Custom Scrollbar Styles */
+        scrollbar-width: thin; /* Width of the scrollbar */
         scrollbar-color: transparent lightblue; /* Color of the scrollbar thumb and track */
+        
+        
+        
   </style>
   
 
@@ -1564,7 +1567,7 @@ function performSearch(x,ele) {
       //  body: JSON.stringify({
             //prompt: x ,
       //      chat_id: chat_id
-       // })
+        })
     })
     .then(response => {
         if (!response.ok) {
