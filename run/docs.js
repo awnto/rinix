@@ -848,6 +848,10 @@ class awnto_ms_pop{
 					this.coderEle.classList.add('a_codex_img');
 			  		this.msgBox.appendChild(this.coderEle);
 			  		this.coderEle.src="assets/"+v_val.src;
+			  		if(v_val.width)
+			  		{
+			  			this.coderEle.style.width=v_val.width+"px";
+			  		}
 			  		
 				}
 				else if(v_arg == "title")
