@@ -302,7 +302,7 @@ body
 	position: relative;
 	top: 0px;
 	left: 0px;
-	width:calc( 100% - 5px );
+	max-width:calc( 100% - 5px );
 	text-align: center;
 	font-weight: bold;
 	
@@ -1363,6 +1363,10 @@ class awnto_ms_pop{
 					this.coderEle.classList.add('a_codex_img');
 			  		this.msgBox.appendChild(this.coderEle);
 			  		this.coderEle.src="assets/"+v_val.src;
+			  		if(v_val.width)
+			  		{
+			  			this.coderEle.style.width=v_val.width+"px";
+			  		}
 			  		
 				}
 				else if(v_arg == "title")
