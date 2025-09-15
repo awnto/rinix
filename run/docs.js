@@ -1042,14 +1042,14 @@ function performSearch(x,ele) {
     //a_glert("Searching ...");
 
     fetch('pages/'+x+'.apage', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
+        //method: 'POST',
+      //  headers: {
+       //     'Content-Type': 'application/json'
+      //  },
+      //  body: JSON.stringify({
             //prompt: x ,
-            chat_id: chat_id
-        })
+      //      chat_id: chat_id
+      //  })
     })
     .then(response => {
         if (!response.ok) {
@@ -1313,7 +1313,10 @@ function awnto_server_glert_create()
     	div.innerHTML="Loading";
     	document.body.appendChild(div);  
     	
-    	a_glert("Loading ...");
+    	
+    	div.style.display = 'none' ;
+    	
+    	//a_glert("Loading ...");
     	
 }
 

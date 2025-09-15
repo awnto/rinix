@@ -12,9 +12,13 @@
 
 <text>
 
- first install RNX System Guide to install RNX System
+ first install RNX System</text>
+<link page="docs" view="inline" name="Guide" >
+ <text>
 
 	after installing RNX System enable rnx xio service 
+	only root user can enable it switch to root user
+	run command "su" then enter your root password
 	
 </text>
 ```bash

@@ -193,6 +193,7 @@ body
 	padding: 5px;
 	margin : 0px;
 	overflow-x: auto;
+	overflow-y: auto;
 	
 }
 
@@ -425,24 +426,28 @@ textarea {
 	background: transparent;
 }
 /* Custom Scrollbar Styles */
-/*
+
         ::-webkit-scrollbar {
-            width: 16px; /* Width of the scrollbar * /
+            width: 10px; /* Width of the scrollbar */
+            height: 10px;
               position: relative;
         }
         ::-webkit-scrollbar-track {
-            background: transparent; /* Background of the scrollbar track * /
+            background: transparent; /* Background of the scrollbar track */
         }
         ::-webkit-scrollbar-thumb {
-            background: lightblue; /* Color of the scrollbar thumb * /
-            border-radius: 8px; /* Rounding of the scrollbar thumb corners * /
+            background: lightblue; /* Color of the scrollbar thumb */
+            border-radius: 8px; /* Rounding of the scrollbar thumb corners */
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: blue; /* Color of the scrollbar thumb on hover * /
+            background: lightgreen; /* Color of the scrollbar thumb on hover */
         }
-        * /
+        
         
 
-        /* Firefox Custom Scrollbar Styles * /
-        scrollbar-width: thin; /* Width of the scrollbar * /
+        /* Firefox Custom Scrollbar Styles */
+        scrollbar-width: thin; /* Width of the scrollbar */
         scrollbar-color: transparent lightblue; /* Color of the scrollbar thumb and track */
+        
+        
+        
