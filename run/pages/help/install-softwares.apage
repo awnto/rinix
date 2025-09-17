@@ -7,8 +7,8 @@
 <text>
 
 </text>
-<link page="docs" view="inline" name="Home" >
-<link action="open_menu" view="inline" name="Menu" >
+
+<load page="loads/docs/indocs-bar">
 
 <text>
 
@@ -90,7 +90,7 @@ example :
 
 dowload Visual code in .deb arm64 </text>
 
-<link view="inline" name="Link" url="https://code.visualstudio.com/#alt-downloads" >
+<link view="inline" name="Link" url="https://code.visualstudio.com/#alt-downloads" icon="download" >
 
 <text>
 

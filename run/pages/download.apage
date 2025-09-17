@@ -6,8 +6,8 @@
 <text>
 
 </text>
-<link page="docs" view="inline" name="Home" >
-<link action="open_menu" view="inline" name="Menu" >
+
+<load page="loads/docs/indocs-bar">
 
 <text>
 
@@ -20,19 +20,19 @@
 
 RNX Core [ aarch64 = arm64 ] 64bit android devices
 </text>
-<link  name="aarch64_2025_07_13.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps_2025/rnx_core6_aarch64_2025_07_13_2113.apk" >
+<link icon="download"  name="aarch64_2025_07_13.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps_2025/rnx_core6_aarch64_2025_07_13_2113.apk" >
 <text>
 RNX Core [arm][minimal] for old or cheap phones
 </text>
-<link  name="arm_2024_09_28_0125.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps/rnx_core5_arm_2024_09_28_0125.apk" >
+<link icon="download"  name="arm_2024_09_28_0125.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps/rnx_core5_arm_2024_09_28_0125.apk" >
 <text>
 RNX Core [arm][full] for old or cheap phones full RNX Core
 </text>
-<link  name="arm_2024_10_21_0248.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps/rnx_core5_arm_2024_10_21_0248.apk" >
+<link icon="download"  name="arm_2024_10_21_0248.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps/rnx_core5_arm_2024_10_21_0248.apk" >
 <text>
 RNX Core Google Play Store
 </text>
-<link url="https://play.google.com/store/apps/details?id=com.awnto.rnx.core"  name="Google Play" >
+<link icon="play" url="https://play.google.com/store/apps/details?id=com.awnto.rnx.core"  name="Google Play" >
 <text>
 
 
@@ -47,8 +47,8 @@ RNX Neo Term : Modern Terminal
 Supported on Android 8.0+
 RNX Neo is modified version of NeoTerm
 </text>
-<link name="all_2025_07_16_1150.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps_2025/rnx_neo_all_2025_07_16_1150.apk" >
-<link url="https://play.google.com/store/apps/details?id=com.awnto.rnx.neo"  name="Google Play" >
+<link icon="download" name="all_2025_07_16_1150.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps_2025/rnx_neo_all_2025_07_16_1150.apk" >
+<link icon="play" url="https://play.google.com/store/apps/details?id=com.awnto.rnx.neo"  name="Google Play" >
 <text>
 
 
@@ -65,8 +65,8 @@ you need to enable xio app
 command "rnx_uwax enable xio"
 to use RNX Desk app for RNX Linux
 </text>
-<link name="all_2025_06_18_1911.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps_2025/rnx_desk_all_2025_06_18_1911.apk" >
-<link url="https://play.google.com/store/apps/details?id=com.awnto.rnx.desk"  name="Google Play" >
+<link icon="download" name="all_2025_06_18_1911.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps_2025/rnx_desk_all_2025_06_18_1911.apk" >
+<link icon="play" url="https://play.google.com/store/apps/details?id=com.awnto.rnx.desk"  name="Google Play" >
 <text>
 
 
@@ -86,8 +86,8 @@ RNX Console : Rebranded Terminal
 Supported on Android 7.0+
 RNX Console is modified version of Termux UI
 </text>
-<link name="all_2025_08_22_2130.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps_2025/rnx_console_all_2025_08_22_2130.apk" >
-<link url="https://play.google.com/store/apps/details?id=com.awnto.rnx.rtmx"  name="Google Play" >
+<link icon="download" name="all_2025_08_22_2130.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps_2025/rnx_console_all_2025_08_22_2130.apk" >
+<link icon="play" url="https://play.google.com/store/apps/details?id=com.awnto.rnx.rtmx"  name="Google Play" >
 <text>
 
 
@@ -111,8 +111,8 @@ you need to enable xio app
 command "rnx_uwax enable xio"
 to use RNX Desk app for RNX Linux
 </text>
-<link name="all_2025_01_16_1336.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps/rnx_xio_all_2025_01_16_1336.apk" >
-<link url="https://play.google.com/store/apps/details?id=com.awnto.rnx.xio"  name="Google Play" >
+<link icon="download" name="all_2025_01_16_1336.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps/rnx_xio_all_2025_01_16_1336.apk" >
+<link icon="play" url="https://play.google.com/store/apps/details?id=com.awnto.rnx.xio"  name="Google Play" >
 <text>
 
 

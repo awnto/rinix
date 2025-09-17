@@ -330,6 +330,11 @@ body
 	
 }
 
+.a_codex_img_round
+{
+	border-radius: 20px;
+
+}
 
 
 
@@ -1334,10 +1339,43 @@ class awnto_ms_pop{
 			  		{
 			  				this.coderEle.classList.add('a_codex_link_div');
 			  		}
+			  		if(v_val.icon)
+			  		{
+			  			var icon = document.createElement('i');
+			  			icon.classList.add('fas');
+			  			if(v_val.icon=="menu")
+			  			{
+			  				icon.classList.add('fa-bars');
+			  			}
+			  			else if(v_val.icon=="video")
+			  			{
+							icon.classList.add('fa-play');
+			  			}
+			  			else if(v_val.icon=="download")
+			  			{
+							icon.classList.add('fa-download');
+			  			}
+			  			else if(v_val.icon=="install")
+			  			{
+							icon.classList.add('fa-bolt');
+			  			}
+			  			else
+			  			{
+							icon.classList.add("fa-"+v_val.icon);
+			  			}
+			  			var icon_text = document.createElement('span');
+			  			icon_text.innerText=" "+v_val.name;
+			  			this.coderEle.appendChild(icon);
+			  			this.coderEle.appendChild(icon_text);
+			  		}
+			  		else
+			  		{
+			  			this.coderEle.innerText=v_val.name;
+			  		}
 					
 					
 			  		this.msgBox.appendChild(this.coderEle);
-			  		this.coderEle.innerText=v_val.name;
+			  		
 			  		
 			  		this.coderEle.addEventListener('click', () => {
 			  			close_a_menu();
@@ -1392,6 +1430,13 @@ class awnto_ms_pop{
 			  		if(v_val.width)
 			  		{
 			  			this.coderEle.style.width=v_val.width+"px";
+			  		}
+			  		if(v_val.view)
+			  		{
+			  			if(v_val.view=="round")
+			  			{
+			  				this.coderEle.classList.add('a_codex_img_round');
+			  			}
 			  		}
 			  		
 				}

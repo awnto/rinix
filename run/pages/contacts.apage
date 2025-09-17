@@ -3,6 +3,15 @@
 <text>
 
 </text>
+**Developer - Rishabh Sarswa (rishu)**
+<text>
+
+</text>
+<img src="rishabhsarswa.png" width="150" view="round" >
+
+<text>
+
+</text>
 `Feel free to Message me if you facing any problem `
 
 
@@ -13,13 +22,13 @@
 <text>
 </text>
 
-<link name="Youtube" view="inline" url="https://youtube.com/channel/UCbZsnEGVyYo2y95_qlQvVBA" >
+<link name="Youtube" view="inline" icon="video" url="https://youtube.com/channel/UCbZsnEGVyYo2y95_qlQvVBA" >
 
 
-<link name="Twitter" view="inline" url="https://twitter.com/iawnto" >
+<link name="Twitter" view="inline" url="https://twitter.com/iawnto" icon="dove" >
 
-<link name="Instagram" view="inline" url="https://instagram.com/i.rishabhsarswa" >
-<link name="Facebook" view="inline" url="https://facebook.com/awnto.go" >
+<link name="Instagram" view="inline" url="https://instagram.com/i.rishabhsarswa" icon="camera" >
+<link name="Facebook" view="inline" url="https://facebook.com/awnto.go" icon="thumbs-up" >
 
 <text>
 
@@ -27,8 +36,9 @@
 **Whatsapp**
 <text>
 </text>
-<link name="Chat" view="inline" url="whatsapp://send?phone=919001531376&text=Hi" >
-<link name="Group" view="inline" url="https://whatsapp.com/channel/0029VaBBKCA6WaKqF5cIxb1Q" >
+
+<link name="Channel" view="inline" url="https://whatsapp.com/channel/0029VaBBKCA6WaKqF5cIxb1Q" icon="newspaper" >
+<link name="Help" view="inline" url="whatsapp://send?phone=919001531376&text=Hi" icon="comments" >
 
 
 <text>
@@ -37,9 +47,9 @@
 **Telegram**
 <text>
 </text>
-<link name="Channel" view="inline" url="https://telegram.me/awnto" >
-<link name="Group" view="inline" url="https://telegram.me/awnto_public" >
-<link name="Help" view="inline" url="https://telegram.me/iawnto" >
+<link name="Channel" view="inline" url="https://telegram.me/awnto" icon="newspaper" >
+<link name="Group" view="inline" url="https://telegram.me/awnto_public" icon="user-group" >
+<link name="Help" view="inline" url="https://telegram.me/iawnto" icon="comments"  >
 
 
 <text>

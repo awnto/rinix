@@ -3,17 +3,16 @@
 <head name="How to use RNX Desk App">
 
 
-
 <text>
 
 </text>
-<link page="docs" view="inline" name="Home" >
-<link action="open_menu" view="inline" name="Menu" >
+
+<load page="loads/docs/indocs-bar">
 
 <text>
 
  first install RNX System</text>
-<link page="docs" view="inline" name="Guide" >
+<link page="docs" view="inline" name="Guide" icon="hammer" >
  <text>
 
 	after installing RNX System enable rnx xio service 
