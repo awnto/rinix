@@ -1,0 +1,105 @@
+
+<title name="RNX OS Installer Guide">
+<head name="RNX OS Installer Guide">
+
+<text>
+
+</text>
+<link action="open_menu" view="inline" name="Menu" icon="menu" >
+<link name="Video Guide" view="inline" url="https://rinix.awnto.com/xmr/yt.html" icon="video" >
+
+<text>
+
+This is a Guide to install RNX Linux on your Android Device
+
+RNX apps are use to run desktop applications on android
+You can run desktop linux softwares on android on this
+
+</text>
+
+<img src="shots/rnx_neo_2.jpg">
+<text>
+RNX Neo
+
+</text>
+<img src="shots/rnx_desk_1.jpg">
+<text>
+RNX Desk
+
+</text>
+
+**Step 1 :**
+<text>Download and install apps
+
+</text>
+    <link page="download"  name="Download Apps" icon="download" >
+<text>
+
+Install Apps in order 
+    RNX Core >> RNX Neo >> RNX Desk
+    
+</text>
+
+**Step 2 :**
+<text>Installing Linux
+
+	run below command in RNX Terminal
+
+</text>
+```bash
+rnx get-default-linux
+```
+<text>
+	then set your linux in prompt
+	1) select debian
+	2) set root password
+	3) user setup
+	
+	This will install and setup debian on android
+
+</text>
+**Step 3:**
+
+<text>to Start basic services 
+
+	run below commands as root user
+        run command "su" to switch to root user
+        then enter your password
+
+</text>
+```bash
+rnx_uwax enable xio
+```
+<text>
+xio is GUI Display for RNX
+
+
+to disable startup service 
+run command 
+
+</text>
+```bash
+rnx_uwax disable xio
+```
+
+<text>
+</text>
+
+**Step 4 :**
+<link page="phantom-killer" view="inline" name="Phantom Killer" icon="hippo" >
+
+<text>
+</text>
+
+**Step 5 :**
+<link page="help/install-softwares" view="inline" name="Install Softwares" icon="install" >
+
+
+<text>
+
+
+</text>
+
+<load page="contacts">
+
+

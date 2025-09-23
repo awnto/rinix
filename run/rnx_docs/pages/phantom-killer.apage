@@ -1,0 +1,45 @@
+
+<title name="How to disable phantom process killer">
+<head name="How to disable phantom process killer">
+
+
+
+<text>
+
+</text>
+
+<load page="loads/docs/indocs-bar">
+
+<text>
+
+in android 12 or higher android kills app processes having more than 32 process
+	
+
+</text>
+
+
+<img width=300 src="shots/phantom_pro_killer.jpg">
+<text>
+If you are killed by system as
+[Process completed (signal 9) - press Enter]
+
+to fix this issue connect your android to any other computer
+	then setup adb then command "adb devices" to check android connected or not
+	then run below commands in connected computer 
+	it will not void your device warranty
+	
+</text>
+
+```bash
+adb shell "/system/bin/device_config set_sync_disabled_for_tests persistent"
+adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"
+adb shell settings put global settings_enable_monitor_phantom_procs false
+```
+
+<text>
+All done :)
+
+</text>
+
+<load page="contacts">
+

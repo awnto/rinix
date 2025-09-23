@@ -1,0 +1,137 @@
+
+<title name="RNX Apps Download Page">
+<head name="RNX Apps Download Page">
+
+
+<text>
+
+</text>
+
+<load page="loads/docs/indocs-bar">
+
+<text>
+
+
+</text>
+
+
+**RNX Core app**
+<text>
+
+RNX Core [ aarch64 = arm64 ] 64bit android devices
+</text>
+<link icon="download"  name="aarch64_2025_07_13.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps_2025/rnx_core6_aarch64_2025_07_13_2113.apk" >
+<text>
+RNX Core [arm][minimal] for old or cheap phones
+</text>
+<link icon="download"  name="arm_2024_09_28_0125.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps/rnx_core5_arm_2024_09_28_0125.apk" >
+<text>
+RNX Core [arm][full] for old or cheap phones full RNX Core
+</text>
+<link icon="download"  name="arm_2024_10_21_0248.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps/rnx_core5_arm_2024_10_21_0248.apk" >
+<text>
+RNX Core Google Play Store
+</text>
+<link icon="play" url="https://play.google.com/store/apps/details?id=com.awnto.rnx.core"  name="Google Play" >
+<text>
+
+
+</text>
+
+
+
+**RNX Neo app**
+<text>
+
+RNX Neo Term : Modern Terminal
+Supported on Android 8.0+
+RNX Neo is modified version of NeoTerm
+</text>
+<link icon="download" name="all_2025_07_16_1150.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps_2025/rnx_neo_all_2025_07_16_1150.apk" >
+<link icon="play" url="https://play.google.com/store/apps/details?id=com.awnto.rnx.neo"  name="Google Play" >
+<text>
+
+
+</text>
+
+
+**RNX Desk app**
+<text>
+
+</text>
+`GUI for RNX Linux`
+<text>
+you need to enable xio app
+command "rnx_uwax enable xio"
+to use RNX Desk app for RNX Linux
+</text>
+<link icon="download" name="all_2025_06_18_1911.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps_2025/rnx_desk_all_2025_06_18_1911.apk" >
+<link icon="play" url="https://play.google.com/store/apps/details?id=com.awnto.rnx.desk"  name="Google Play" >
+<text>
+
+
+</text>
+
+
+
+
+
+
+
+
+**RNX Console app**
+<text>
+
+RNX Console : Rebranded Terminal
+Supported on Android 7.0+
+RNX Console is modified version of Termux UI
+</text>
+<link icon="download" name="all_2025_08_22_2130.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps_2025/rnx_console_all_2025_08_22_2130.apk" >
+<link icon="play" url="https://play.google.com/store/apps/details?id=com.awnto.rnx.rtmx"  name="Google Play" >
+<text>
+
+
+</text>
+
+
+
+
+
+
+
+
+
+**RNX XIO app**
+<text>
+
+</text>
+`GUI for RNX Linux`
+<text>
+you need to enable xio app
+command "rnx_uwax enable xio"
+to use RNX Desk app for RNX Linux
+</text>
+<link icon="download" name="all_2025_01_16_1336.apk" type="download" url="https://github.com/awnto/rnx-dl-4/releases/download/rnx_apps/rnx_xio_all_2025_01_16_1336.apk" >
+<link icon="play" url="https://play.google.com/store/apps/details?id=com.awnto.rnx.xio"  name="Google Play" >
+<text>
+
+
+</text>
+
+`Note:`
+<text> Install Apps in order 
+    RNX Core >> RNX Neo >> RNX Desk
+  other wise you may get rnx core connection error
+  if you installed in wrong order
+   don't worry force close RNX Neo then open RNX Neo again
+   OR restart Phone
+
+   if you getting permission error on android 10+ 
+    after installing apk from our website then
+    restart phone and open RNX Neo your error will be solved
+
+</text>
+
+<load page="contacts">
+
+

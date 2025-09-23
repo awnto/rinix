@@ -1,0 +1,87 @@
+
+<title name="How to use RNX Desk App">
+<head name="How to use RNX Desk App">
+
+
+<text>
+
+</text>
+
+<load page="loads/docs/indocs-bar">
+
+<text>
+
+ first install RNX System</text>
+<link page="docs" view="inline" name="Guide" icon="hammer" >
+ <text>
+
+	after installing RNX System enable rnx xio service 
+	only root user can enable it switch to root user
+	run command "su" then enter your root password
+	
+</text>
+```bash
+su
+```
+<text>
+   then run this command
+   
+</text>
+```bash
+rnx_uwax enable xio
+```
+
+<text>
+
+	Get Latest RNX Desk App Download Page
+Now open RNX Desk App it will work fine.
+
+</text>
+
+**Controls of RNX Desk app**
+
+<text>
+
+</text>	
+`toggle keyboard` <text>= swipe right from left edge or swipe up from bottom or pop "KB" button
+
+</text>	
+`scroll` <text>= swipe touch screen
+
+</text>
+`left click` <text>= single touch
+
+</text>
+`drag mouse left click` <text>= touch and hold then swipe touch screen
+
+</text>
+`right click` <text>= touch and hold then release finger
+
+
+</text>
+**Virtual keyboard using mouse**
+<text>
+
+	right click to press key
+	left click to hold keyboard key 
+	    -> press right or left mouse key
+		to release holded keyboard key.
+
+</text>
+**Change scaling and dpi**
+<text>
+
+pop the display button
+	D for % dpi ratio
+	X for % X11 ratio
+	
+	
+Enjoy!!
+
+</text>
+
+
+
+
+<load page="contacts">
+

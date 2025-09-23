@@ -1,0 +1,131 @@
+
+<title name="RNX OS Installing Softwares">
+<head name="RNX OS Installing Softwares">
+
+
+
+<text>
+
+</text>
+
+<load page="loads/docs/indocs-bar">
+
+<text>
+
+</text>
+**Install Softwares from Debian Repository**
+<text>
+
+to install softwares like firefox , vlc
+	only root user can install/update softwares
+	command 'su' is use to switch to root
+
+</text>
+```bash
+su
+```
+<text>
+
+after that
+update sources repository database
+
+</text>
+```bash
+apt update
+```
+<text>
+then to install software use command
+"apt install [package_name]"
+
+for </text>
+`Chrome`
+<text>
+
+</text>
+```bash
+apt install chromium
+```
+<text>
+for </text>
+`VLC`
+<text>
+
+</text>
+```bash
+apt install vlc
+```
+
+<text>
+for </text>
+`Firefox`
+<text>
+
+</text>
+```bash
+apt install firefox-esr
+```
+<text>
+
+</text>
+
+**Install Software from outside**
+
+<text>
+ 
+first search on internet like 
+example : "how to install vlc on debian"
+remember our OS is 
+✅ arm64 = aarch64 = arm 64bit 
+ ---  not ---
+❌ x86 = i386 = 32bit 
+❌ x86_64 = amd64 = 64bit 
+
+
+installing softwares from external sources 
+example : 
+
+</text>
+`Visual Code Studio`
+<text>
+
+dowload Visual code in .deb arm64 </text>
+
+<link view="inline" name="Link" url="https://code.visualstudio.com/#alt-downloads" icon="download" >
+
+<text>
+
+</text>
+
+<img src="shots/vscode_select.jpg" width="300" >
+
+<text>
+
+then login to root user by command 'su'
+then navigate to downloaded folder and run
+
+</text>
+```bash
+cd ~/Downloads
+apt install ./code_*.deb
+```
+<text>
+
+run command "code --no-sandbox" in GUI terminal as user
+to start visual code
+
+</text>
+```bash
+code --no-sandbox
+```
+<text>
+
+all done
+
+
+</text>
+
+
+
+
+<load page="contacts">
+

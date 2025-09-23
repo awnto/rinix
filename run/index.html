@@ -1,28 +1,28 @@
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+	
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <title>RNX Docs</title>
     
-    <link rel="icon" href="assets/awnto-prize.png" >
+    <link rel="icon" href="rnx_docs/assets/awnto-prize.png" >
 
 
   <!-- Open Graph Title -->
-  <meta property="og:title" content="RNX Docs" />
+  <meta property="og:title" content="RNX OS Docs" />
 
   <!-- Open Graph Description (optional but recommended) -->
-  <meta property="og:description" content="RNX Docs" />
+  <meta property="og:description" content="Welcome to Awnto RNX Linux" />
 
   <!-- Open Graph Image (logo or preview image) -->
-  <meta property="og:image" content="assets/awnto-prize.png" />
+  <meta property="og:image" content="rnx_docs/assets/awnto-prize.png" />
 
   <!-- Open Graph Type -->
   <meta property="og:type" content="website" />
@@ -54,6 +54,62 @@ body
 {
 	padding :0px;
 	margin: 0px;
+}
+
+
+#a_view_fullbody
+{
+	position:absolute;
+	width:calc(100% - 10px);
+	margin : 0px ;
+	padding: 5px ;
+	background: linear-gradient(to left, rgba(255, 182, 193, 1), rgba(173, 216, 230, 1));
+	display:none;
+}
+
+   table {
+      	  border-collapse: separate;
+	  border-spacing: 0;
+	  border: 1px solid #333;
+	  border-radius: 15px;
+	  overflow: hidden; /* Ensures corners are clipped */
+	  width: 100% ;
+	  margin: 0px auto;
+    }
+
+    th, td {
+      border: 1px solid #333;
+      padding: 2px;
+      text-align: center;
+       border-spacing: 0;
+      
+    }
+
+    th {
+      background-color: lightgreen;
+    }
+    	tr:nth-child(even)
+	{
+		background-color: lightpink ;
+	}
+	 tr:nth-child(odd)
+	{
+		background-color: lightblue ;
+	}
+
+.a_codex_table_cell_odd
+{
+	background-color: lightblue ;
+}
+.a_codex_table_cell_even
+{
+	background-color: lightpink ;
+}
+
+.a_codex_table_cell_div
+{
+	margin : 0px ;
+	padding : 0px ;
 }
 #a_glert
 {
@@ -320,17 +376,15 @@ body
 
 .a_codex_img
 {
-	background-color: rgba(0, 0, 0, 0.1);
 	font-size: 24px;
 	padding: 0px;
 	margin: 0px;
-	display: inline-block;
-	position: relative;
+	display: block;
 	top: 0px;
 	left: 0px;
-	max-width:calc( 100% - 5px );
 	text-align: center;
 	font-weight: bold;
+	max-width: calc(100% - 0px);
 	
 }
 
@@ -339,7 +393,30 @@ body
 	border-radius: 20px;
 
 }
+.a_codex_img_full
+{
+	margin:0px;
+	padding:0px;
+}
+.a_codex_img_gallery
+{
+	display : flex ;
+	display: inline-block;
+	margin: 0px;
+	justify-content: center; /* Horizontal centering */
+  	align-items: center;     /* Vertical centering */
+  	width: calc(100% - 2px);
 
+}
+.a_codex_table_area
+{
+
+	overflow: auto ;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+
+}
 
 
 
@@ -358,6 +435,7 @@ body
   animation: fadeIn 0.5s ease-in-out;
   margin:0px;
   padding:0px;
+  display:block;
 }
 
 textarea {
@@ -451,17 +529,15 @@ textarea {
 }
 .a_chat_ai
 {
-	display: inline-block;
+	display: block;
 	margin:0px;
 	padding:0px;
 	background-color: transparent; 
     	border: 0px solid rgba(173, 216, 230, 0.5);
-    	max-width: calc(100% - 0px);
     	font-family: Arial, sans-serif;
     	font-size: 18px;
     	
-    	width: 100%;
-    	overflow: hidden;
+    	overflow: auto;
 
 }
 .a_chat_break
@@ -485,6 +561,8 @@ textarea {
 	text-align:center;
 	background: transparent;
 }
+
+
 /* Custom Scrollbar Styles */
 
         ::-webkit-scrollbar {
@@ -503,13 +581,9 @@ textarea {
             background: lightgreen; /* Color of the scrollbar thumb on hover */
         }
         
-        
+  
 
-        /* Firefox Custom Scrollbar Styles */
-        scrollbar-width: thin; /* Width of the scrollbar */
-        scrollbar-color: transparent lightblue; /* Color of the scrollbar thumb and track */
-        
-        
+
         
   </style>
   
@@ -526,12 +600,13 @@ textarea {
 	    <div id="a_chat_spacer"></div>
 
 </div>
+
 <div id="a_panel">
 
 	<div id="a_bar_menu" ></div>
 	
 	<div id="a_bar" >
-		<img onclick="toggle_a_menu()" id="awnto_logo" src="assets/awnto-prize.png" />
+		<img onclick="toggle_a_menu()" id="awnto_logo" src="rnx_docs/assets/awnto-prize.png" />
 		
 		<textarea id="myInput" rows="1" placeholder=" Enter Page ID" ></textarea>
 		
@@ -547,7 +622,11 @@ textarea {
 	</div>
 </div>
 
+<div id="a_view_fullbody" ></div>
+
     <script>
+
+console.log("Awnto Page v1.2");
 
 var a_fade_in_value=0;
 function fade_in_input()
@@ -921,17 +1000,37 @@ console.log("chat_id="+chat_id);
 
 const params = new URLSearchParams(window.location.search);
 
-const ap_page = params.get("page"); // "John"
-if(ap_page)
-	showPage(ap_page);
-else
-	showPage("docs");
+var ap_page = params.get("page"); // "John"
+if(!ap_page)
+{
+	ap_page="docs"
+}
+showPage(ap_page);
+
+
 document.getElementById('myInput').value="docs";
 //showPage_onele(a_gid("a_bar_menu"),"page");
 showPage_onele(a_gid("a_bar_menu"),"menu");
 
+
+const ap_page_view = params.get("view"); // "John"
+if(ap_page_view)
+{
+	if(ap_page_view == "full")
+	{
+		const a_full_page = a_gid("a_view_fullbody") ;
+		
+		a_gid("a_panel").style.display="none";
+		a_gid("a_result").style.display="none";
+		
+		a_full_page.style.display="block";
+		showPage_onele(a_full_page,ap_page);
+	}
+}
+
+
 //console.log(a_gid("a_bar_menu"));
-function showPage_onele(ele,x) {
+function showPage_onele(ele,x,type="page") {
     
     	
     	need_scroller=1;
@@ -943,7 +1042,7 @@ function showPage_onele(ele,x) {
 		    const responseContainer = ele;//document.getElementById('response');
 		    
 		    
-		   	performSearch(x,ele)
+		   	performSearch(x,ele,type);
 		    
 		    
           }
@@ -1013,6 +1112,8 @@ class awnto_ms_pop{
    	this.msgBox= document.createElement('div');
 	this.msgBox.classList.add('lineElement');
 	this.responseContainer.appendChild(this.msgBox);
+	
+	//this.msgBox = responseContainer;
 	
 	this.coder_view_active=0;// 1 for code; 2 for header ; 3 thinking; 
 	this.coder_view_active_last=0;
@@ -1124,7 +1225,7 @@ class awnto_ms_pop{
 			  				if(this.wait_string.length == cmp.length)
 			  				{
 			  					// locked
-			  					console.log("locked:"+this.wait_string);
+			  					////console.log("locked:"+this.wait_string);
 			  					this.matched_string.val[ct].breaked=0;
 			  					this.coder_view_active=this.matched_string.val[ct].code;
 			  					this.perform_message_lock_unlock(this.coder_view_active,1);
@@ -1154,7 +1255,7 @@ class awnto_ms_pop{
 			  				//if(this.wait_string.length == cmp.length)
 			  				{
 			  					// locked
-			  					console.log("wlocked:"+this.wait_string);
+			  					////console.log("wlocked:"+cmp);
 			  					this.matched_string.val[ct].breaked=0;
 			  					this.coder_view_active=this.matched_string.val[ct].code;
 			  					this.perform_message_lock_unlock(this.coder_view_active,1);
@@ -1199,7 +1300,7 @@ class awnto_ms_pop{
 				  					if(cmp_type == 0)
 				  					{
 					  					// unlocked
-					  					console.log("unlocked:"+this.wait_string);
+					  					////console.log("unlocked:"+this.wait_string);
 					  					this.perform_message_lock_unlock(this.coder_view_active,0);
 					  					this.coder_view_active=0;
 					  				}
@@ -1306,7 +1407,8 @@ class awnto_ms_pop{
 			  	const aarg = this.coder_inner ;
 				//const aparts = aarg.split(/[\s]+/);
 				const aparts = aarg.match(/(?:[^\s"]+|"[^"]*")+/g)
-				console.log(aparts.length+""+aparts);
+				//console.log(aparts.length+"=>"+aparts);
+				
 				
 				var v_val={};
 				var v_arg=aparts[0];
@@ -1314,13 +1416,29 @@ class awnto_ms_pop{
 				{
 				
 					//const text = "key=value";
-					const sparts = aparts[i].split(/=(.+)/);
-					//console.log(sparts); // ["key", "value"]
+					//const sparts = aparts[i].split(/=(.+)/);
+					//const sparts = aparts[i].split(/=(.+)/).slice(0, 2);
+					
+					const index = aparts[i].indexOf('=');
+					var sparts={};
+					if (index != -1)
+					{ 
+					  sparts[0]=aparts[i].slice(0, index)
+					  sparts[1]=aparts[i].slice(index + 1);
+					}
+					//console.log(aparts[i]); // ["key", "value"]
 					if(sparts[1])
 					{
-						const unquoted = sparts[1].replace(/^"(.*)"$/, '$1');
-						//const unquoted = sparts[1];
-						v_val[sparts[0]]=unquoted;
+						//const unquoted = sparts[1].replace(/^"(.*)"$/, '$1');
+						
+						const st_val = sparts[1];
+						if(st_val[0]=="\"" && st_val[st_val.length - 1]=="\"" )
+							v_val[sparts[0]] = st_val.slice(1, -1);
+						else
+							v_val[sparts[0]] = st_val;
+						
+						//console.log(v_val[sparts[0]]);
+						
 					}
 
 				}
@@ -1430,16 +1548,36 @@ class awnto_ms_pop{
 					this.coderEle = document.createElement('img');
 					this.coderEle.classList.add('a_codex_img');
 			  		this.msgBox.appendChild(this.coderEle);
-			  		this.coderEle.src="assets/"+v_val.src;
+			  		if(v_val.src)
+			  		{
+				  		this.coderEle.src="rnx_docs/assets/"+v_val.src;
+				  	}
+				  	else if(v_val.raw_src)
+			  		{
+				  		this.coderEle.src=v_val.raw_src;
+				  	}
 			  		if(v_val.width)
 			  		{
 			  			this.coderEle.style.width=v_val.width+"px";
+			  		}
+			  		if(v_val.height)
+			  		{
+			  			this.coderEle.style.height=v_val.height+"px";
 			  		}
 			  		if(v_val.view)
 			  		{
 			  			if(v_val.view=="round")
 			  			{
 			  				this.coderEle.classList.add('a_codex_img_round');
+			  			}
+			  			else if(v_val.view=="gallery")
+			  			{
+			  				this.coderEle.classList.add('a_codex_img_round');
+			  				this.coderEle.classList.add('a_codex_img_gallery');
+			  			}
+			  			else if(v_val.view=="full")
+			  			{
+			  				this.coderEle.classList.add('a_codex_img_full');
 			  			}
 			  		}
 			  		
@@ -1470,7 +1608,136 @@ class awnto_ms_pop{
 				  		showPage_onele(this.msgBox,v_val.page);
 
 				  	}
+				  	else if(v_val.source)
+			  		{
+				  		//this.coderEle.innerText=v_val.name;
+				  		//document.title = v_val.name;
+				  		
+				  		showPage_onele(this.msgBox,v_val.source,"data");
+
+				  	}
 			  		
+				}
+				else if(v_arg="table")
+				{
+					var table_area = document.createElement('div');
+				      var table = document.createElement('table');
+				      table_area.classList.add('a_codex_table_area');
+				      
+				      //table.style.transformOrigin = "top left";
+				      //table.style.transform = "scale(0.50)";
+				      //table_area.style.height=(table.style.offsetHeight*0.5)+"px";
+				      //table.area.style.width=(table.style.offsetWidth*0.5)+"px";
+				      
+				      if(v_val.si_font)
+				      	table.style.fontSize=v_val.si_font+"px";
+				     
+				      var x=0;
+				      var y=0;
+				      
+				      if(v_val.wi)
+				      	x=v_val.wi;
+				      
+				      if(v_val.hi)
+				      	y=v_val.hi;
+				      	
+				      var cell_merged=[];
+
+				      for (let i = 0; i < y; i++) {
+					const row = table.insertRow();
+					for (let j = 0; j < x; j++) {
+					
+					    if(cell_merged[i+"_"+j] && cell_merged[i+"_"+j]=="true")
+					    {
+					    	//console.log("skipping="+i+"_"+j);
+					    }
+					    else
+					    {
+						var cell;
+					
+						if(v_val["type_"+i+"_"+j] && v_val["type_"+i+"_"+j] == "head")
+						{
+							cell = document.createElement('th');
+							row.appendChild(cell);
+						}
+						else
+						{
+							  cell = row.insertCell();
+						}
+						if(v_val["type_"+i+"_"+j])
+						{
+							if(v_val["type_"+i+"_"+j] == "odd")
+							{
+								cell.classList.add('a_codex_table_cell_odd');
+							}
+							else if(v_val["type_"+i+"_"+j] == "even")
+							{
+								cell.classList.add('a_codex_table_cell_even');
+							}
+						}
+						
+						
+						if(v_val["value_"+i+"_"+j] )
+						{
+							cell.innerText = v_val["value_"+i+"_"+j];
+						}
+						if(v_val["source_"+i+"_"+j] )
+						{
+							//console.log("source2_"+v_val["source_"+i+"_"+j]);
+							const decoded = v_val["source_"+i+"_"+j]
+								  .replace("&lt;", "<")
+								  .replace("&gt;", ">");
+							//console.log(decoded);
+							
+							
+							var cell_div = document.createElement('div');
+							cell_div.classList.add('a_codex_table_cell_div');
+							cell.appendChild(cell_div);
+							showPage_onele(cell_div,decoded,"data");
+						}
+						if(v_val["wi_"+i+"_"+j] )
+						{
+							cell.style.width = v_val["wi_"+i+"_"+j]+"px" ;
+						}
+						
+						if(v_val["view_"+i+"_"+j] && v_val["view_"+i+"_"+j]=="full" )
+						{
+							cell.classList.add('a_codex_img_full');
+						}
+						
+						
+						//cell.innerText=i+","+j;
+						
+						var join_x=1;
+						var join_y=1;
+						if(v_val["jx_"+i+"_"+j] )
+						{
+							join_x=v_val["jx_"+i+"_"+j];
+							cell.colSpan=v_val["jx_"+i+"_"+j];
+							//console.log(join_x);
+							
+						}
+						if(v_val["jy_"+i+"_"+j] )
+						{
+							join_y=v_val["jy_"+i+"_"+j];
+							cell.rowSpan=v_val["jy_"+i+"_"+j];
+						}
+						
+						for(let itx=0 ; itx < join_y ; itx++)
+						for(let ity=0 ; ity < join_x ; ity++)
+						{
+							var jn_x=i+itx;
+							var jn_y=j+ity;
+							cell_merged[jn_x+"_"+jn_y]="true";
+							//console.log("merging "+jn_x+"_"+jn_y);
+						}
+						
+					    }
+					}
+				      }
+				      
+				      this.msgBox.appendChild(table_area);
+				      table_area.appendChild(table);
 				}
 				
 			  	
@@ -1600,7 +1867,7 @@ class awnto_ms_pop{
 
 }
     
-function performSearch(x,ele) {
+function performSearch(x,ele,type="page") {
     is_searching = 1;
     
     thinking('run');
@@ -1621,7 +1888,7 @@ function performSearch(x,ele) {
     	
     
     const responseContainer = document.createElement('div');
-    
+    //const responseContainer = main_responseContainer;
     responseContainer.classList.add('a_chat_ai');
     main_responseContainer.appendChild(responseContainer);
     
@@ -1630,95 +1897,104 @@ function performSearch(x,ele) {
     //const responseContainer = document.getElementById('response');
     let lineNumber = 0;
     //a_glert("Searching ...");
-
-    fetch('pages/'+x+'.apage', {
-        //method: 'POST',
-      //  headers: {
-       //     'Content-Type': 'application/json'
-      //  },
-      //  body: JSON.stringify({
-            //prompt: x ,
-      //      chat_id: chat_id
-      //  })
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.body.getReader();
-    })
-    .then(reader => {
-        const decoder = new TextDecoder();
-        //const lineElement = document.createElement('div');
-        //lineElement.classList.add('lineElement');
-        lineresponse = "";
-        
-        var ms_pop = new awnto_ms_pop(responseContainer);
-        
-        scroller();
-        const processText = () => {
-            reader.read().then(({ done, value }) => {
-                if (done) {
-                    is_searching = 0;
-                    thinking('stop');
-                    
-                    scroller();
-                    
-                    //const breakElement = document.createElement('div');
-		    //breakElement.classList.add('a_chat_break_end');
-		    //main_responseContainer.appendChild(breakElement);
-                    scroller_do();
-                    
-                    /*
-                    const padElement = document.createElement('div');
-                    padElement.innerHTML = "<hr>";
-                            responseContainer.appendChild(padElement);
-                    //scroller_do();
-                    
-                    //a_glert("Search done");
-                    scroller_do();
-                    */
-                    return;
-                }
-                const text = decoder.decode(value, { stream: true });
-                //text.split('\n').forEach(line => {
-                
-                var line = text;
-                
-                    if (line) {
-                        try {
-                        
-                        	//a_glert("Thinking ...");
-                        	
-                           
-		                    scroller();
+	
+	if(type=="data")
+	{
+		var ms_pop = new awnto_ms_pop(responseContainer);
+		ms_pop.perform_message(x);
+	}
+	if(type=="page")
+	{
+	    fetch('rnx_docs/pages/'+x+'.apage', {
+		//method: 'POST',
+	      //  headers: {
+	       //     'Content-Type': 'application/json'
+	      //  },
+	      //  body: JSON.stringify({
+		    //prompt: x ,
+	      //      chat_id: chat_id
+	      //  })
+	    })
+	    .then(response => {
+		if (!response.ok) {
+		    throw new Error('Network response was not ok');
+		}
+		return response.body.getReader();
+	    })
+	    .then(reader => {
+		const decoder = new TextDecoder();
+		//const lineElement = document.createElement('div');
+		//lineElement.classList.add('lineElement');
+		lineresponse = "";
+		
+		var ms_pop = new awnto_ms_pop(responseContainer);
+		
+		scroller();
+		const processText = () => {
+		    reader.read().then(({ done, value }) => {
+		        if (done) {
+		            is_searching = 0;
+		            thinking('stop');
 		            
-		            ms_pop.perform_message(line);
+		            scroller();
 		            
+		            //const breakElement = document.createElement('div');
+			    //breakElement.classList.add('a_chat_break_end');
+			    //main_responseContainer.appendChild(breakElement);
+		            scroller_do();
 		            
-                            scroller_do();
-                        } catch (e) {
-                            console.error('Error parsing JSON:', e);
-                        }
-                    }
-                //});
-                processText();
-            });
-        };
-        processText();
-    })
-    .catch(error => {
-    	thinking('stop');
-    	//var ms_pop_err = new awnto_ms_pop(responseContainer);
-    	//ms_pop_err.perform_message("Page Error\n");
-    	responseContainer.innerHTML="Error in Loading";
-    	//console.log(responseContainer);
-        console.error('awnto Error:', error);
-       
-        a_glert('Error:', error);
-        is_searching = 0;
-        thinking('stop');
-    });
+		            /*
+		            const padElement = document.createElement('div');
+		            padElement.innerHTML = "<hr>";
+		                    responseContainer.appendChild(padElement);
+		            //scroller_do();
+		            
+		            //a_glert("Search done");
+		            scroller_do();
+		            */
+		            return;
+		        }
+		        const text = decoder.decode(value, { stream: true });
+		        //text.split('\n').forEach(line => {
+		        
+		        var line = text;
+		        
+		            if (line) {
+		                try {
+		                
+		                	//a_glert("Thinking ...");
+		                	
+		                   
+				            scroller();
+				    
+				    ms_pop.perform_message(line);
+				    
+				    
+		                    scroller_do();
+		                } catch (e) {
+		                    console.error('Error parsing JSON:', e);
+		                }
+		            }
+		        //});
+		        processText();
+		    });
+		};
+		processText();
+	    })
+	    .catch(error => {
+	    	thinking('stop');
+	    	//var ms_pop_err = new awnto_ms_pop(responseContainer);
+	    	//ms_pop_err.perform_message("Page Error\n");
+	    	responseContainer.innerHTML="Error in Loading";
+	    	//console.log(responseContainer);
+		console.error('awnto Error:', error);
+	       
+		a_glert('Error:', error);
+		is_searching = 0;
+		thinking('stop');
+	    });
+	    
+	}
 }
 
 document.addEventListener('DOMContentLoaded', () => {
